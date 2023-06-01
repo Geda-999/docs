@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用子网格构建 Web 布局 | Ashun&#39;s 技術駅</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="./img/logo.png">
+    <meta name="description" content="web前端博客文档技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="./assets/css/0.styles.29ffe2f2.css" as="style"><link rel="preload" href="./assets/js/app.51e06a17.js" as="script"><link rel="preload" href="./assets/js/2.6bfa654c.js" as="script"><link rel="preload" href="./assets/js/67.eb806f94.js" as="script"><link rel="prefetch" href="./assets/js/10.259c00df.js"><link rel="prefetch" href="./assets/js/100.8a8007f1.js"><link rel="prefetch" href="./assets/js/101.e1c83f86.js"><link rel="prefetch" href="./assets/js/102.750a412e.js"><link rel="prefetch" href="./assets/js/103.6c554985.js"><link rel="prefetch" href="./assets/js/104.0f5e69b0.js"><link rel="prefetch" href="./assets/js/105.108ae29e.js"><link rel="prefetch" href="./assets/js/106.4048e9d5.js"><link rel="prefetch" href="./assets/js/107.fb61cfe5.js"><link rel="prefetch" href="./assets/js/108.5ce2a1f3.js"><link rel="prefetch" href="./assets/js/109.6f944b4e.js"><link rel="prefetch" href="./assets/js/11.e56835f1.js"><link rel="prefetch" href="./assets/js/110.974794b1.js"><link rel="prefetch" href="./assets/js/111.de72b6f9.js"><link rel="prefetch" href="./assets/js/112.a79b7f5c.js"><link rel="prefetch" href="./assets/js/113.1192e1f9.js"><link rel="prefetch" href="./assets/js/114.c5f71184.js"><link rel="prefetch" href="./assets/js/115.823d2493.js"><link rel="prefetch" href="./assets/js/116.3df0e1fb.js"><link rel="prefetch" href="./assets/js/117.3c204a35.js"><link rel="prefetch" href="./assets/js/118.6ae9b059.js"><link rel="prefetch" href="./assets/js/119.53cdc834.js"><link rel="prefetch" href="./assets/js/12.6fce4b9c.js"><link rel="prefetch" href="./assets/js/120.4a4827d3.js"><link rel="prefetch" href="./assets/js/121.e3dd0ba4.js"><link rel="prefetch" href="./assets/js/122.e12893df.js"><link rel="prefetch" href="./assets/js/123.860345de.js"><link rel="prefetch" href="./assets/js/124.870c36f7.js"><link rel="prefetch" href="./assets/js/125.2a2078fc.js"><link rel="prefetch" href="./assets/js/126.879811d5.js"><link rel="prefetch" href="./assets/js/127.0ed434de.js"><link rel="prefetch" href="./assets/js/128.444efe17.js"><link rel="prefetch" href="./assets/js/129.0e2dcb1a.js"><link rel="prefetch" href="./assets/js/13.c5b85d17.js"><link rel="prefetch" href="./assets/js/130.a7cce164.js"><link rel="prefetch" href="./assets/js/131.8020f9f5.js"><link rel="prefetch" href="./assets/js/132.1378daaa.js"><link rel="prefetch" href="./assets/js/133.c9901c93.js"><link rel="prefetch" href="./assets/js/134.9986e7d3.js"><link rel="prefetch" href="./assets/js/135.4debd5ef.js"><link rel="prefetch" href="./assets/js/136.037f1171.js"><link rel="prefetch" href="./assets/js/137.98e5cb49.js"><link rel="prefetch" href="./assets/js/138.06d7d386.js"><link rel="prefetch" href="./assets/js/139.aa3af49d.js"><link rel="prefetch" href="./assets/js/14.46db0646.js"><link rel="prefetch" href="./assets/js/140.6718c56e.js"><link rel="prefetch" href="./assets/js/141.ade5b74e.js"><link rel="prefetch" href="./assets/js/142.871d0c3e.js"><link rel="prefetch" href="./assets/js/143.04f903eb.js"><link rel="prefetch" href="./assets/js/144.ebab2fda.js"><link rel="prefetch" href="./assets/js/145.9153051b.js"><link rel="prefetch" href="./assets/js/146.e9e088c7.js"><link rel="prefetch" href="./assets/js/147.509eb54e.js"><link rel="prefetch" href="./assets/js/148.095d42b4.js"><link rel="prefetch" href="./assets/js/149.ee335ff9.js"><link rel="prefetch" href="./assets/js/15.c7214cb3.js"><link rel="prefetch" href="./assets/js/150.f369d681.js"><link rel="prefetch" href="./assets/js/151.2d780e26.js"><link rel="prefetch" href="./assets/js/152.a8103407.js"><link rel="prefetch" href="./assets/js/153.3444bdee.js"><link rel="prefetch" href="./assets/js/154.a6b8b7cb.js"><link rel="prefetch" href="./assets/js/155.812074c5.js"><link rel="prefetch" href="./assets/js/156.4242b76d.js"><link rel="prefetch" href="./assets/js/157.ce93b44d.js"><link rel="prefetch" href="./assets/js/158.3c39e032.js"><link rel="prefetch" href="./assets/js/159.b9b9ce1b.js"><link rel="prefetch" href="./assets/js/16.a33ee746.js"><link rel="prefetch" href="./assets/js/160.36ea09e1.js"><link rel="prefetch" href="./assets/js/161.da1399da.js"><link rel="prefetch" href="./assets/js/162.af2f38f2.js"><link rel="prefetch" href="./assets/js/163.64d90b39.js"><link rel="prefetch" href="./assets/js/164.d46e0939.js"><link rel="prefetch" href="./assets/js/165.d434825f.js"><link rel="prefetch" href="./assets/js/166.72469d9a.js"><link rel="prefetch" href="./assets/js/167.12a100a6.js"><link rel="prefetch" href="./assets/js/168.32ef29b0.js"><link rel="prefetch" href="./assets/js/169.02c3a977.js"><link rel="prefetch" href="./assets/js/17.2f4241b2.js"><link rel="prefetch" href="./assets/js/170.f67b0b4e.js"><link rel="prefetch" href="./assets/js/171.d4e4e2ab.js"><link rel="prefetch" href="./assets/js/172.a4db6843.js"><link rel="prefetch" href="./assets/js/173.99d0b519.js"><link rel="prefetch" href="./assets/js/174.194a37bd.js"><link rel="prefetch" href="./assets/js/175.5afc7f5d.js"><link rel="prefetch" href="./assets/js/176.9ca92581.js"><link rel="prefetch" href="./assets/js/177.88883612.js"><link rel="prefetch" href="./assets/js/178.8cc8c81a.js"><link rel="prefetch" href="./assets/js/179.48ff11f9.js"><link rel="prefetch" href="./assets/js/18.5e430898.js"><link rel="prefetch" href="./assets/js/180.d9dace13.js"><link rel="prefetch" href="./assets/js/181.99bd7831.js"><link rel="prefetch" href="./assets/js/182.b7703138.js"><link rel="prefetch" href="./assets/js/183.49faa727.js"><link rel="prefetch" href="./assets/js/184.e065ff9c.js"><link rel="prefetch" href="./assets/js/185.4bf8c900.js"><link rel="prefetch" href="./assets/js/186.7ae3fb7e.js"><link rel="prefetch" href="./assets/js/187.242b65cd.js"><link rel="prefetch" href="./assets/js/188.f8fd17d1.js"><link rel="prefetch" href="./assets/js/189.2aa8a989.js"><link rel="prefetch" href="./assets/js/19.0a01f169.js"><link rel="prefetch" href="./assets/js/190.542a75c6.js"><link rel="prefetch" href="./assets/js/191.0d88621d.js"><link rel="prefetch" href="./assets/js/192.d6189fdf.js"><link rel="prefetch" href="./assets/js/193.cd40f3dd.js"><link rel="prefetch" href="./assets/js/194.90d1c487.js"><link rel="prefetch" href="./assets/js/195.a8b132c7.js"><link rel="prefetch" href="./assets/js/196.4aed2b18.js"><link rel="prefetch" href="./assets/js/197.b786923a.js"><link rel="prefetch" href="./assets/js/198.cf7bb90e.js"><link rel="prefetch" href="./assets/js/199.3c8d5cd3.js"><link rel="prefetch" href="./assets/js/20.b0cecbf4.js"><link rel="prefetch" href="./assets/js/200.4470fa70.js"><link rel="prefetch" href="./assets/js/201.19a5fbaa.js"><link rel="prefetch" href="./assets/js/202.8d8e1833.js"><link rel="prefetch" href="./assets/js/203.ff46f013.js"><link rel="prefetch" href="./assets/js/204.3c0f6038.js"><link rel="prefetch" href="./assets/js/205.4e8df9f0.js"><link rel="prefetch" href="./assets/js/206.4d030426.js"><link rel="prefetch" href="./assets/js/207.16b8922d.js"><link rel="prefetch" href="./assets/js/208.eed9f6ed.js"><link rel="prefetch" href="./assets/js/209.bb47d049.js"><link rel="prefetch" href="./assets/js/21.3f9d7ee7.js"><link rel="prefetch" href="./assets/js/210.f3698c48.js"><link rel="prefetch" href="./assets/js/211.8536d076.js"><link rel="prefetch" href="./assets/js/212.5ea19d83.js"><link rel="prefetch" href="./assets/js/213.2d7fbe65.js"><link rel="prefetch" href="./assets/js/214.58d77848.js"><link rel="prefetch" href="./assets/js/215.c409814c.js"><link rel="prefetch" href="./assets/js/216.c7f38ec7.js"><link rel="prefetch" href="./assets/js/217.52f4fb8f.js"><link rel="prefetch" href="./assets/js/218.2d336fe8.js"><link rel="prefetch" href="./assets/js/219.404a041d.js"><link rel="prefetch" href="./assets/js/22.50b5894f.js"><link rel="prefetch" href="./assets/js/220.7b39df3f.js"><link rel="prefetch" href="./assets/js/221.8cac4741.js"><link rel="prefetch" href="./assets/js/222.58133346.js"><link rel="prefetch" href="./assets/js/223.173244b5.js"><link rel="prefetch" href="./assets/js/224.d129135a.js"><link rel="prefetch" href="./assets/js/225.9a976e53.js"><link rel="prefetch" href="./assets/js/226.b604a315.js"><link rel="prefetch" href="./assets/js/227.096f3eac.js"><link rel="prefetch" href="./assets/js/228.43e7a135.js"><link rel="prefetch" href="./assets/js/229.5020ed6d.js"><link rel="prefetch" href="./assets/js/23.89641737.js"><link rel="prefetch" href="./assets/js/230.050df540.js"><link rel="prefetch" href="./assets/js/231.b86e2c62.js"><link rel="prefetch" href="./assets/js/232.7b0a8dc5.js"><link rel="prefetch" href="./assets/js/233.7f218bb9.js"><link rel="prefetch" href="./assets/js/234.43fa3d2c.js"><link rel="prefetch" href="./assets/js/235.31ba11a8.js"><link rel="prefetch" href="./assets/js/236.c69c9cb0.js"><link rel="prefetch" href="./assets/js/237.a8a3b7d1.js"><link rel="prefetch" href="./assets/js/238.f0b60602.js"><link rel="prefetch" href="./assets/js/239.1a71a038.js"><link rel="prefetch" href="./assets/js/24.bb5c3519.js"><link rel="prefetch" href="./assets/js/240.6ab06c29.js"><link rel="prefetch" href="./assets/js/241.23be7db5.js"><link rel="prefetch" href="./assets/js/242.d2002e86.js"><link rel="prefetch" href="./assets/js/243.053876a8.js"><link rel="prefetch" href="./assets/js/244.50413b1d.js"><link rel="prefetch" href="./assets/js/245.4afc8132.js"><link rel="prefetch" href="./assets/js/246.206c304c.js"><link rel="prefetch" href="./assets/js/247.4de6f8d9.js"><link rel="prefetch" href="./assets/js/248.f8dd77ec.js"><link rel="prefetch" href="./assets/js/249.abba1a21.js"><link rel="prefetch" href="./assets/js/25.d1f0ea23.js"><link rel="prefetch" href="./assets/js/250.3979f145.js"><link rel="prefetch" href="./assets/js/251.04dfc273.js"><link rel="prefetch" href="./assets/js/252.3b941d8d.js"><link rel="prefetch" href="./assets/js/253.46480464.js"><link rel="prefetch" href="./assets/js/254.0879b957.js"><link rel="prefetch" href="./assets/js/255.640b277f.js"><link rel="prefetch" href="./assets/js/256.ca4a54d3.js"><link rel="prefetch" href="./assets/js/257.0ac227cc.js"><link rel="prefetch" href="./assets/js/258.91a81620.js"><link rel="prefetch" href="./assets/js/259.ea72a45c.js"><link rel="prefetch" href="./assets/js/26.44c3aa74.js"><link rel="prefetch" href="./assets/js/260.a726878a.js"><link rel="prefetch" href="./assets/js/261.a73f84fe.js"><link rel="prefetch" href="./assets/js/262.35afeacd.js"><link rel="prefetch" href="./assets/js/263.80213420.js"><link rel="prefetch" href="./assets/js/264.e8f4b664.js"><link rel="prefetch" href="./assets/js/265.d225d91e.js"><link rel="prefetch" href="./assets/js/266.cdeec1a5.js"><link rel="prefetch" href="./assets/js/267.032f4b39.js"><link rel="prefetch" href="./assets/js/268.021c2cd5.js"><link rel="prefetch" href="./assets/js/269.1d0bf387.js"><link rel="prefetch" href="./assets/js/27.76bd9446.js"><link rel="prefetch" href="./assets/js/270.ae3e9d2c.js"><link rel="prefetch" href="./assets/js/271.4d0b87c9.js"><link rel="prefetch" href="./assets/js/272.61595794.js"><link rel="prefetch" href="./assets/js/273.2e1d18f3.js"><link rel="prefetch" href="./assets/js/274.d3eea410.js"><link rel="prefetch" href="./assets/js/275.3c0bb601.js"><link rel="prefetch" href="./assets/js/276.9f4344df.js"><link rel="prefetch" href="./assets/js/277.6fb01966.js"><link rel="prefetch" href="./assets/js/278.82d690ba.js"><link rel="prefetch" href="./assets/js/279.de9dcf34.js"><link rel="prefetch" href="./assets/js/28.da07c02c.js"><link rel="prefetch" href="./assets/js/280.9429c6ca.js"><link rel="prefetch" href="./assets/js/281.1039158a.js"><link rel="prefetch" href="./assets/js/282.b0f5a757.js"><link rel="prefetch" href="./assets/js/283.880ec6b0.js"><link rel="prefetch" href="./assets/js/284.24482fdf.js"><link rel="prefetch" href="./assets/js/285.b3d6a18a.js"><link rel="prefetch" href="./assets/js/286.6ad7beaa.js"><link rel="prefetch" href="./assets/js/287.35f679f8.js"><link rel="prefetch" href="./assets/js/288.1bd9dc09.js"><link rel="prefetch" href="./assets/js/289.811d1148.js"><link rel="prefetch" href="./assets/js/29.79171fed.js"><link rel="prefetch" href="./assets/js/290.0fede7e0.js"><link rel="prefetch" href="./assets/js/291.e4339e23.js"><link rel="prefetch" href="./assets/js/292.f088a338.js"><link rel="prefetch" href="./assets/js/293.b538e967.js"><link rel="prefetch" href="./assets/js/294.7903f0a5.js"><link rel="prefetch" href="./assets/js/295.dbe00fe2.js"><link rel="prefetch" href="./assets/js/296.fcd1d148.js"><link rel="prefetch" href="./assets/js/297.fd28c9ca.js"><link rel="prefetch" href="./assets/js/298.bca7f008.js"><link rel="prefetch" href="./assets/js/299.9e02f11a.js"><link rel="prefetch" href="./assets/js/3.e6014923.js"><link rel="prefetch" href="./assets/js/30.b909af08.js"><link rel="prefetch" href="./assets/js/300.b8040fd2.js"><link rel="prefetch" href="./assets/js/301.ed4f0504.js"><link rel="prefetch" href="./assets/js/302.a96effbc.js"><link rel="prefetch" href="./assets/js/303.76ed0a32.js"><link rel="prefetch" href="./assets/js/304.0253a855.js"><link rel="prefetch" href="./assets/js/305.f062cbea.js"><link rel="prefetch" href="./assets/js/306.6be60f10.js"><link rel="prefetch" href="./assets/js/307.4b9654db.js"><link rel="prefetch" href="./assets/js/308.fd3b6c74.js"><link rel="prefetch" href="./assets/js/309.7d535ce1.js"><link rel="prefetch" href="./assets/js/31.4450cd07.js"><link rel="prefetch" href="./assets/js/310.16d47d28.js"><link rel="prefetch" href="./assets/js/311.fa169767.js"><link rel="prefetch" href="./assets/js/312.dd36a2ff.js"><link rel="prefetch" href="./assets/js/313.5dc2b20c.js"><link rel="prefetch" href="./assets/js/314.d4c5877e.js"><link rel="prefetch" href="./assets/js/315.35e983ce.js"><link rel="prefetch" href="./assets/js/316.2dd6692e.js"><link rel="prefetch" href="./assets/js/317.342f5279.js"><link rel="prefetch" href="./assets/js/318.3f0c9ad3.js"><link rel="prefetch" href="./assets/js/319.e8709ec1.js"><link rel="prefetch" href="./assets/js/32.8a4afa37.js"><link rel="prefetch" href="./assets/js/320.214d37e6.js"><link rel="prefetch" href="./assets/js/321.8fdd4ff1.js"><link rel="prefetch" href="./assets/js/322.cace68a2.js"><link rel="prefetch" href="./assets/js/323.1138fd10.js"><link rel="prefetch" href="./assets/js/324.969b9f40.js"><link rel="prefetch" href="./assets/js/325.b936ea4b.js"><link rel="prefetch" href="./assets/js/326.a7a1ff10.js"><link rel="prefetch" href="./assets/js/327.fc2f28fb.js"><link rel="prefetch" href="./assets/js/328.2d587730.js"><link rel="prefetch" href="./assets/js/329.9f30e110.js"><link rel="prefetch" href="./assets/js/33.b2de82e5.js"><link rel="prefetch" href="./assets/js/330.0e549210.js"><link rel="prefetch" href="./assets/js/331.43a28c1f.js"><link rel="prefetch" href="./assets/js/332.41aa52f6.js"><link rel="prefetch" href="./assets/js/333.eb2b36f1.js"><link rel="prefetch" href="./assets/js/334.b5ae008f.js"><link rel="prefetch" href="./assets/js/335.7cf57736.js"><link rel="prefetch" href="./assets/js/336.ab847f0d.js"><link rel="prefetch" href="./assets/js/337.6d871719.js"><link rel="prefetch" href="./assets/js/338.2008a25e.js"><link rel="prefetch" href="./assets/js/339.0d0b390b.js"><link rel="prefetch" href="./assets/js/34.0d0ff5b9.js"><link rel="prefetch" href="./assets/js/340.e64456c2.js"><link rel="prefetch" href="./assets/js/341.a9484ae3.js"><link rel="prefetch" href="./assets/js/342.7554e4c3.js"><link rel="prefetch" href="./assets/js/343.749797b7.js"><link rel="prefetch" href="./assets/js/344.ec0b02e8.js"><link rel="prefetch" href="./assets/js/345.814c523e.js"><link rel="prefetch" href="./assets/js/346.1d83fa13.js"><link rel="prefetch" href="./assets/js/347.b0833f3c.js"><link rel="prefetch" href="./assets/js/348.f2a07d32.js"><link rel="prefetch" href="./assets/js/349.5c0e2e6b.js"><link rel="prefetch" href="./assets/js/35.8ae06e68.js"><link rel="prefetch" href="./assets/js/350.0cdde9e0.js"><link rel="prefetch" href="./assets/js/351.b64821bd.js"><link rel="prefetch" href="./assets/js/352.0f009bb2.js"><link rel="prefetch" href="./assets/js/353.bacef64b.js"><link rel="prefetch" href="./assets/js/354.9ce75544.js"><link rel="prefetch" href="./assets/js/355.295327de.js"><link rel="prefetch" href="./assets/js/356.5f06b941.js"><link rel="prefetch" href="./assets/js/357.cfba9c21.js"><link rel="prefetch" href="./assets/js/358.15bfcd7b.js"><link rel="prefetch" href="./assets/js/359.0fb97b7f.js"><link rel="prefetch" href="./assets/js/36.7fc9842a.js"><link rel="prefetch" href="./assets/js/360.d4db74dc.js"><link rel="prefetch" href="./assets/js/361.ea779264.js"><link rel="prefetch" href="./assets/js/362.900fddf9.js"><link rel="prefetch" href="./assets/js/363.2f8c9d85.js"><link rel="prefetch" href="./assets/js/364.36d6f6dc.js"><link rel="prefetch" href="./assets/js/365.3e6ee899.js"><link rel="prefetch" href="./assets/js/366.28d59ce1.js"><link rel="prefetch" href="./assets/js/367.6c4a066a.js"><link rel="prefetch" href="./assets/js/368.fcdcf377.js"><link rel="prefetch" href="./assets/js/369.fccb601d.js"><link rel="prefetch" href="./assets/js/37.5650208b.js"><link rel="prefetch" href="./assets/js/370.a3fdf23e.js"><link rel="prefetch" href="./assets/js/371.fe633639.js"><link rel="prefetch" href="./assets/js/372.75c04d68.js"><link rel="prefetch" href="./assets/js/373.7b4ec561.js"><link rel="prefetch" href="./assets/js/374.3331c946.js"><link rel="prefetch" href="./assets/js/375.2fb884c1.js"><link rel="prefetch" href="./assets/js/376.2d13e436.js"><link rel="prefetch" href="./assets/js/377.98e6a137.js"><link rel="prefetch" href="./assets/js/378.b8e5a0ce.js"><link rel="prefetch" href="./assets/js/379.a60c9900.js"><link rel="prefetch" href="./assets/js/38.729d7b89.js"><link rel="prefetch" href="./assets/js/380.61b32b40.js"><link rel="prefetch" href="./assets/js/381.e53960fb.js"><link rel="prefetch" href="./assets/js/382.73233810.js"><link rel="prefetch" href="./assets/js/383.12a0c4b6.js"><link rel="prefetch" href="./assets/js/384.a79827d8.js"><link rel="prefetch" href="./assets/js/385.f8e0c583.js"><link rel="prefetch" href="./assets/js/386.35603b95.js"><link rel="prefetch" href="./assets/js/387.cd573f98.js"><link rel="prefetch" href="./assets/js/388.def3581f.js"><link rel="prefetch" href="./assets/js/389.674ad064.js"><link rel="prefetch" href="./assets/js/39.b9f4808f.js"><link rel="prefetch" href="./assets/js/390.7cd5de22.js"><link rel="prefetch" href="./assets/js/391.5f8b0fd4.js"><link rel="prefetch" href="./assets/js/392.ff6477be.js"><link rel="prefetch" href="./assets/js/393.a96d32f7.js"><link rel="prefetch" href="./assets/js/394.7b1f890b.js"><link rel="prefetch" href="./assets/js/395.1e4a3d0a.js"><link rel="prefetch" href="./assets/js/396.848307c7.js"><link rel="prefetch" href="./assets/js/397.648c5567.js"><link rel="prefetch" href="./assets/js/398.e216299e.js"><link rel="prefetch" href="./assets/js/399.e46af7ce.js"><link rel="prefetch" href="./assets/js/4.e196a436.js"><link rel="prefetch" href="./assets/js/40.10ad8f8c.js"><link rel="prefetch" href="./assets/js/400.80dc70d9.js"><link rel="prefetch" href="./assets/js/401.def2c173.js"><link rel="prefetch" href="./assets/js/402.6ce0fe2d.js"><link rel="prefetch" href="./assets/js/403.249380b7.js"><link rel="prefetch" href="./assets/js/404.aa2b8ca1.js"><link rel="prefetch" href="./assets/js/405.baa1b98d.js"><link rel="prefetch" href="./assets/js/406.b8492a09.js"><link rel="prefetch" href="./assets/js/407.9d23b902.js"><link rel="prefetch" href="./assets/js/408.b278d25a.js"><link rel="prefetch" href="./assets/js/409.42e862e9.js"><link rel="prefetch" href="./assets/js/41.88641403.js"><link rel="prefetch" href="./assets/js/410.c350f645.js"><link rel="prefetch" href="./assets/js/411.1291848d.js"><link rel="prefetch" href="./assets/js/412.8fdada15.js"><link rel="prefetch" href="./assets/js/413.396f82fb.js"><link rel="prefetch" href="./assets/js/414.0c12c93b.js"><link rel="prefetch" href="./assets/js/415.1dda5d59.js"><link rel="prefetch" href="./assets/js/416.92beb370.js"><link rel="prefetch" href="./assets/js/417.8b9a08f6.js"><link rel="prefetch" href="./assets/js/418.eae4ec97.js"><link rel="prefetch" href="./assets/js/419.5e8b1f1d.js"><link rel="prefetch" href="./assets/js/42.a74e3062.js"><link rel="prefetch" href="./assets/js/420.9dba873e.js"><link rel="prefetch" href="./assets/js/421.7089b96b.js"><link rel="prefetch" href="./assets/js/422.8547dac2.js"><link rel="prefetch" href="./assets/js/423.e9f16280.js"><link rel="prefetch" href="./assets/js/424.50a686f4.js"><link rel="prefetch" href="./assets/js/425.80378a2c.js"><link rel="prefetch" href="./assets/js/426.98632357.js"><link rel="prefetch" href="./assets/js/427.25dd4797.js"><link rel="prefetch" href="./assets/js/428.92172190.js"><link rel="prefetch" href="./assets/js/429.63d4d9ad.js"><link rel="prefetch" href="./assets/js/43.8ebbe93e.js"><link rel="prefetch" href="./assets/js/430.452c44c8.js"><link rel="prefetch" href="./assets/js/431.fd71013a.js"><link rel="prefetch" href="./assets/js/432.623a19d1.js"><link rel="prefetch" href="./assets/js/433.2c6758ac.js"><link rel="prefetch" href="./assets/js/434.868d1b91.js"><link rel="prefetch" href="./assets/js/435.fc890be1.js"><link rel="prefetch" href="./assets/js/436.78b6f9a2.js"><link rel="prefetch" href="./assets/js/437.6862a786.js"><link rel="prefetch" href="./assets/js/438.c11e6a94.js"><link rel="prefetch" href="./assets/js/439.122f4303.js"><link rel="prefetch" href="./assets/js/44.dccebf5e.js"><link rel="prefetch" href="./assets/js/440.dadbc716.js"><link rel="prefetch" href="./assets/js/441.3d20d62e.js"><link rel="prefetch" href="./assets/js/442.d0c913a0.js"><link rel="prefetch" href="./assets/js/443.8f1943c2.js"><link rel="prefetch" href="./assets/js/444.9751d49c.js"><link rel="prefetch" href="./assets/js/445.161bb6e3.js"><link rel="prefetch" href="./assets/js/446.2aed558d.js"><link rel="prefetch" href="./assets/js/447.f6b51100.js"><link rel="prefetch" href="./assets/js/448.50188ebf.js"><link rel="prefetch" href="./assets/js/449.adf69d97.js"><link rel="prefetch" href="./assets/js/45.9cee8aae.js"><link rel="prefetch" href="./assets/js/450.2fb35bb7.js"><link rel="prefetch" href="./assets/js/451.cded77f3.js"><link rel="prefetch" href="./assets/js/452.b7615e08.js"><link rel="prefetch" href="./assets/js/453.08595d7c.js"><link rel="prefetch" href="./assets/js/454.181f8b6b.js"><link rel="prefetch" href="./assets/js/455.a9c33e69.js"><link rel="prefetch" href="./assets/js/456.9fc1b7d5.js"><link rel="prefetch" href="./assets/js/457.bb592ec3.js"><link rel="prefetch" href="./assets/js/458.7c3f18de.js"><link rel="prefetch" href="./assets/js/459.daae679f.js"><link rel="prefetch" href="./assets/js/46.418c92ef.js"><link rel="prefetch" href="./assets/js/460.dc92547a.js"><link rel="prefetch" href="./assets/js/461.3249d8d2.js"><link rel="prefetch" href="./assets/js/462.3f888d7f.js"><link rel="prefetch" href="./assets/js/463.46c0c86e.js"><link rel="prefetch" href="./assets/js/464.a944e067.js"><link rel="prefetch" href="./assets/js/465.fd4fa780.js"><link rel="prefetch" href="./assets/js/466.17338811.js"><link rel="prefetch" href="./assets/js/467.0af26de9.js"><link rel="prefetch" href="./assets/js/468.b13f9b36.js"><link rel="prefetch" href="./assets/js/469.83afb2df.js"><link rel="prefetch" href="./assets/js/47.ffd247bf.js"><link rel="prefetch" href="./assets/js/470.f24a3182.js"><link rel="prefetch" href="./assets/js/471.1262f86f.js"><link rel="prefetch" href="./assets/js/472.d32d8b32.js"><link rel="prefetch" href="./assets/js/473.32622278.js"><link rel="prefetch" href="./assets/js/474.a686c3d9.js"><link rel="prefetch" href="./assets/js/475.884d3c4c.js"><link rel="prefetch" href="./assets/js/476.8879c9c7.js"><link rel="prefetch" href="./assets/js/477.6f29deee.js"><link rel="prefetch" href="./assets/js/478.69429b9a.js"><link rel="prefetch" href="./assets/js/479.0fe717e5.js"><link rel="prefetch" href="./assets/js/48.23614bd4.js"><link rel="prefetch" href="./assets/js/480.71f08a32.js"><link rel="prefetch" href="./assets/js/481.4f426b43.js"><link rel="prefetch" href="./assets/js/482.3fd8f61e.js"><link rel="prefetch" href="./assets/js/483.b041eadb.js"><link rel="prefetch" href="./assets/js/484.230d4aac.js"><link rel="prefetch" href="./assets/js/485.2fbb5ab4.js"><link rel="prefetch" href="./assets/js/486.71176952.js"><link rel="prefetch" href="./assets/js/487.e304a699.js"><link rel="prefetch" href="./assets/js/488.aebf4a77.js"><link rel="prefetch" href="./assets/js/489.6da946ab.js"><link rel="prefetch" href="./assets/js/49.e53e8725.js"><link rel="prefetch" href="./assets/js/490.c7b885a4.js"><link rel="prefetch" href="./assets/js/491.c4c50fe8.js"><link rel="prefetch" href="./assets/js/492.d51abf6a.js"><link rel="prefetch" href="./assets/js/493.dfef63dd.js"><link rel="prefetch" href="./assets/js/494.07dbe5f3.js"><link rel="prefetch" href="./assets/js/495.96d709d4.js"><link rel="prefetch" href="./assets/js/496.c9d2e1fa.js"><link rel="prefetch" href="./assets/js/497.69d594d0.js"><link rel="prefetch" href="./assets/js/498.c65dc178.js"><link rel="prefetch" href="./assets/js/499.755b3f8e.js"><link rel="prefetch" href="./assets/js/5.b4f9e577.js"><link rel="prefetch" href="./assets/js/50.b5661c01.js"><link rel="prefetch" href="./assets/js/500.cc306d9b.js"><link rel="prefetch" href="./assets/js/501.4cef9a13.js"><link rel="prefetch" href="./assets/js/502.184213c6.js"><link rel="prefetch" href="./assets/js/503.e36362a5.js"><link rel="prefetch" href="./assets/js/504.4f9c63ea.js"><link rel="prefetch" href="./assets/js/505.d57f2db3.js"><link rel="prefetch" href="./assets/js/506.99a7df7b.js"><link rel="prefetch" href="./assets/js/507.35ed7d11.js"><link rel="prefetch" href="./assets/js/508.30049c01.js"><link rel="prefetch" href="./assets/js/509.8c578f2c.js"><link rel="prefetch" href="./assets/js/51.b0f61cb6.js"><link rel="prefetch" href="./assets/js/510.b1cc3115.js"><link rel="prefetch" href="./assets/js/511.0f74e007.js"><link rel="prefetch" href="./assets/js/512.32624a55.js"><link rel="prefetch" href="./assets/js/513.6b33049a.js"><link rel="prefetch" href="./assets/js/514.b6fd9a7a.js"><link rel="prefetch" href="./assets/js/515.0cd4fa2a.js"><link rel="prefetch" href="./assets/js/516.a58fb17b.js"><link rel="prefetch" href="./assets/js/517.511ff106.js"><link rel="prefetch" href="./assets/js/518.d6ba97d5.js"><link rel="prefetch" href="./assets/js/519.cd87afef.js"><link rel="prefetch" href="./assets/js/52.6c8f17a0.js"><link rel="prefetch" href="./assets/js/520.3a304397.js"><link rel="prefetch" href="./assets/js/521.7f8ce0ad.js"><link rel="prefetch" href="./assets/js/522.0de08d0d.js"><link rel="prefetch" href="./assets/js/523.475a9ce3.js"><link rel="prefetch" href="./assets/js/524.bfc91e1a.js"><link rel="prefetch" href="./assets/js/525.a491348c.js"><link rel="prefetch" href="./assets/js/526.71f44290.js"><link rel="prefetch" href="./assets/js/527.94254777.js"><link rel="prefetch" href="./assets/js/528.8b3bacc6.js"><link rel="prefetch" href="./assets/js/529.f5e41930.js"><link rel="prefetch" href="./assets/js/53.08c5fded.js"><link rel="prefetch" href="./assets/js/530.98463250.js"><link rel="prefetch" href="./assets/js/531.ada8a485.js"><link rel="prefetch" href="./assets/js/532.d672486c.js"><link rel="prefetch" href="./assets/js/533.9748ae38.js"><link rel="prefetch" href="./assets/js/534.f8c384f1.js"><link rel="prefetch" href="./assets/js/535.793889b4.js"><link rel="prefetch" href="./assets/js/536.bb6533da.js"><link rel="prefetch" href="./assets/js/537.05a04e90.js"><link rel="prefetch" href="./assets/js/538.2f267ebd.js"><link rel="prefetch" href="./assets/js/539.06c7a60d.js"><link rel="prefetch" href="./assets/js/54.22bd8cc8.js"><link rel="prefetch" href="./assets/js/540.731540e8.js"><link rel="prefetch" href="./assets/js/541.eff3ca1a.js"><link rel="prefetch" href="./assets/js/542.ec482d67.js"><link rel="prefetch" href="./assets/js/543.3d3c0d16.js"><link rel="prefetch" href="./assets/js/544.fa2e7aee.js"><link rel="prefetch" href="./assets/js/545.46dbb0ee.js"><link rel="prefetch" href="./assets/js/546.f90713ab.js"><link rel="prefetch" href="./assets/js/547.d5d2e9c3.js"><link rel="prefetch" href="./assets/js/548.c28df03a.js"><link rel="prefetch" href="./assets/js/549.452bb7d5.js"><link rel="prefetch" href="./assets/js/55.d73d8be3.js"><link rel="prefetch" href="./assets/js/550.b340d924.js"><link rel="prefetch" href="./assets/js/551.f20954d7.js"><link rel="prefetch" href="./assets/js/552.a2871801.js"><link rel="prefetch" href="./assets/js/553.b3263731.js"><link rel="prefetch" href="./assets/js/554.4f621656.js"><link rel="prefetch" href="./assets/js/555.4a158964.js"><link rel="prefetch" href="./assets/js/556.a0c239f6.js"><link rel="prefetch" href="./assets/js/557.55c867ae.js"><link rel="prefetch" href="./assets/js/558.e1600562.js"><link rel="prefetch" href="./assets/js/559.6fe3b21e.js"><link rel="prefetch" href="./assets/js/56.a73b9b7e.js"><link rel="prefetch" href="./assets/js/560.ffab1521.js"><link rel="prefetch" href="./assets/js/561.f2f60af1.js"><link rel="prefetch" href="./assets/js/562.ff69f8ce.js"><link rel="prefetch" href="./assets/js/563.bba4a073.js"><link rel="prefetch" href="./assets/js/564.a6609f5a.js"><link rel="prefetch" href="./assets/js/565.729802cf.js"><link rel="prefetch" href="./assets/js/566.0a9223c0.js"><link rel="prefetch" href="./assets/js/567.74c2f7d1.js"><link rel="prefetch" href="./assets/js/568.4a775f46.js"><link rel="prefetch" href="./assets/js/569.2603754a.js"><link rel="prefetch" href="./assets/js/57.9db8cfbd.js"><link rel="prefetch" href="./assets/js/570.ceea638e.js"><link rel="prefetch" href="./assets/js/571.3b08ccbb.js"><link rel="prefetch" href="./assets/js/572.826a6e73.js"><link rel="prefetch" href="./assets/js/573.eaaea982.js"><link rel="prefetch" href="./assets/js/574.ee62c3c0.js"><link rel="prefetch" href="./assets/js/575.61ce38d7.js"><link rel="prefetch" href="./assets/js/576.630231b5.js"><link rel="prefetch" href="./assets/js/577.711766a4.js"><link rel="prefetch" href="./assets/js/578.693f86f8.js"><link rel="prefetch" href="./assets/js/579.86f2238f.js"><link rel="prefetch" href="./assets/js/58.1ae97fb5.js"><link rel="prefetch" href="./assets/js/580.1fdd1db8.js"><link rel="prefetch" href="./assets/js/581.cc805987.js"><link rel="prefetch" href="./assets/js/582.6ad1723e.js"><link rel="prefetch" href="./assets/js/583.78491d5d.js"><link rel="prefetch" href="./assets/js/584.a7ae3d05.js"><link rel="prefetch" href="./assets/js/585.3bbaf0b4.js"><link rel="prefetch" href="./assets/js/586.cfcd2a22.js"><link rel="prefetch" href="./assets/js/587.12520de7.js"><link rel="prefetch" href="./assets/js/588.1ff067c6.js"><link rel="prefetch" href="./assets/js/589.b836592b.js"><link rel="prefetch" href="./assets/js/59.e1352906.js"><link rel="prefetch" href="./assets/js/590.8463fa7c.js"><link rel="prefetch" href="./assets/js/591.1f8c2f4f.js"><link rel="prefetch" href="./assets/js/592.7a872f9a.js"><link rel="prefetch" href="./assets/js/593.4b7f4b1e.js"><link rel="prefetch" href="./assets/js/594.ce6d84bd.js"><link rel="prefetch" href="./assets/js/595.67495708.js"><link rel="prefetch" href="./assets/js/596.a44ee4e7.js"><link rel="prefetch" href="./assets/js/597.68bf3c5e.js"><link rel="prefetch" href="./assets/js/598.f53f92e2.js"><link rel="prefetch" href="./assets/js/599.a313d8f2.js"><link rel="prefetch" href="./assets/js/6.b2bf8851.js"><link rel="prefetch" href="./assets/js/60.989e1a4b.js"><link rel="prefetch" href="./assets/js/600.adeed702.js"><link rel="prefetch" href="./assets/js/601.63f5ca0c.js"><link rel="prefetch" href="./assets/js/602.130ace7b.js"><link rel="prefetch" href="./assets/js/603.73162d1f.js"><link rel="prefetch" href="./assets/js/604.548a53e8.js"><link rel="prefetch" href="./assets/js/605.827803cc.js"><link rel="prefetch" href="./assets/js/606.a907c838.js"><link rel="prefetch" href="./assets/js/607.3efeb937.js"><link rel="prefetch" href="./assets/js/608.b92b09c7.js"><link rel="prefetch" href="./assets/js/609.8466bbc3.js"><link rel="prefetch" href="./assets/js/61.43c0393f.js"><link rel="prefetch" href="./assets/js/610.d4c50008.js"><link rel="prefetch" href="./assets/js/611.3d0c0ecb.js"><link rel="prefetch" href="./assets/js/612.fb002081.js"><link rel="prefetch" href="./assets/js/613.1ba17354.js"><link rel="prefetch" href="./assets/js/614.8489cd8f.js"><link rel="prefetch" href="./assets/js/615.ea3a8d1a.js"><link rel="prefetch" href="./assets/js/616.4fcef252.js"><link rel="prefetch" href="./assets/js/617.bde92fe9.js"><link rel="prefetch" href="./assets/js/618.bfcac701.js"><link rel="prefetch" href="./assets/js/619.c69489b0.js"><link rel="prefetch" href="./assets/js/62.2f9c7b0f.js"><link rel="prefetch" href="./assets/js/620.b7b7d55a.js"><link rel="prefetch" href="./assets/js/621.a569186e.js"><link rel="prefetch" href="./assets/js/622.e5495d95.js"><link rel="prefetch" href="./assets/js/623.ce056787.js"><link rel="prefetch" href="./assets/js/624.5328f58e.js"><link rel="prefetch" href="./assets/js/625.6cf411d4.js"><link rel="prefetch" href="./assets/js/626.130b3a28.js"><link rel="prefetch" href="./assets/js/627.41d127c8.js"><link rel="prefetch" href="./assets/js/628.2b0c65a7.js"><link rel="prefetch" href="./assets/js/629.1eac702f.js"><link rel="prefetch" href="./assets/js/63.5d875372.js"><link rel="prefetch" href="./assets/js/630.87e7f982.js"><link rel="prefetch" href="./assets/js/631.0ee55f8a.js"><link rel="prefetch" href="./assets/js/632.a156b332.js"><link rel="prefetch" href="./assets/js/633.b5ee74af.js"><link rel="prefetch" href="./assets/js/634.02a02a51.js"><link rel="prefetch" href="./assets/js/635.1afd1c4f.js"><link rel="prefetch" href="./assets/js/636.66801cf8.js"><link rel="prefetch" href="./assets/js/637.bfc2d43a.js"><link rel="prefetch" href="./assets/js/638.d42c02ce.js"><link rel="prefetch" href="./assets/js/639.f7ec3194.js"><link rel="prefetch" href="./assets/js/64.947ac4bb.js"><link rel="prefetch" href="./assets/js/640.0c0f61b4.js"><link rel="prefetch" href="./assets/js/641.bed118d2.js"><link rel="prefetch" href="./assets/js/642.0cbfa9aa.js"><link rel="prefetch" href="./assets/js/643.c62896b1.js"><link rel="prefetch" href="./assets/js/644.83b60ecc.js"><link rel="prefetch" href="./assets/js/645.48bcfcc5.js"><link rel="prefetch" href="./assets/js/646.3ffce6b3.js"><link rel="prefetch" href="./assets/js/647.9298008c.js"><link rel="prefetch" href="./assets/js/648.2ea4e81d.js"><link rel="prefetch" href="./assets/js/649.7fa23752.js"><link rel="prefetch" href="./assets/js/65.6109feb8.js"><link rel="prefetch" href="./assets/js/650.fe13ac64.js"><link rel="prefetch" href="./assets/js/651.d31d664a.js"><link rel="prefetch" href="./assets/js/652.b640c7f7.js"><link rel="prefetch" href="./assets/js/653.7e2b1e35.js"><link rel="prefetch" href="./assets/js/654.075d76c5.js"><link rel="prefetch" href="./assets/js/655.4cf73dd6.js"><link rel="prefetch" href="./assets/js/656.c61adf05.js"><link rel="prefetch" href="./assets/js/657.45c32698.js"><link rel="prefetch" href="./assets/js/658.af785cb0.js"><link rel="prefetch" href="./assets/js/659.bda80a38.js"><link rel="prefetch" href="./assets/js/66.b0338122.js"><link rel="prefetch" href="./assets/js/660.878033af.js"><link rel="prefetch" href="./assets/js/661.4cf9ea65.js"><link rel="prefetch" href="./assets/js/662.ff140e93.js"><link rel="prefetch" href="./assets/js/663.f6670edd.js"><link rel="prefetch" href="./assets/js/664.38df4d2b.js"><link rel="prefetch" href="./assets/js/665.849fa119.js"><link rel="prefetch" href="./assets/js/666.aa0629b9.js"><link rel="prefetch" href="./assets/js/667.7c9000c5.js"><link rel="prefetch" href="./assets/js/668.44bf1b79.js"><link rel="prefetch" href="./assets/js/669.705dd716.js"><link rel="prefetch" href="./assets/js/670.a8c40805.js"><link rel="prefetch" href="./assets/js/671.5ef251f3.js"><link rel="prefetch" href="./assets/js/672.d02d37d9.js"><link rel="prefetch" href="./assets/js/673.cc07d434.js"><link rel="prefetch" href="./assets/js/674.c5ade923.js"><link rel="prefetch" href="./assets/js/675.c15e7f72.js"><link rel="prefetch" href="./assets/js/676.703f186d.js"><link rel="prefetch" href="./assets/js/677.f80e721d.js"><link rel="prefetch" href="./assets/js/678.70596970.js"><link rel="prefetch" href="./assets/js/679.b604cad7.js"><link rel="prefetch" href="./assets/js/68.9608896a.js"><link rel="prefetch" href="./assets/js/680.86fcdd45.js"><link rel="prefetch" href="./assets/js/681.dc313d9c.js"><link rel="prefetch" href="./assets/js/682.8c0ab97c.js"><link rel="prefetch" href="./assets/js/683.bfbc7336.js"><link rel="prefetch" href="./assets/js/684.0312819a.js"><link rel="prefetch" href="./assets/js/685.9b2988a3.js"><link rel="prefetch" href="./assets/js/686.61ed3329.js"><link rel="prefetch" href="./assets/js/687.5afb1ea7.js"><link rel="prefetch" href="./assets/js/688.b4aa1c96.js"><link rel="prefetch" href="./assets/js/689.0e54b0cf.js"><link rel="prefetch" href="./assets/js/69.b54dff06.js"><link rel="prefetch" href="./assets/js/690.cfade915.js"><link rel="prefetch" href="./assets/js/691.07a98dd2.js"><link rel="prefetch" href="./assets/js/692.e109dde0.js"><link rel="prefetch" href="./assets/js/693.aa732aa6.js"><link rel="prefetch" href="./assets/js/694.e891684a.js"><link rel="prefetch" href="./assets/js/695.20cef288.js"><link rel="prefetch" href="./assets/js/696.32a29e68.js"><link rel="prefetch" href="./assets/js/697.ff414484.js"><link rel="prefetch" href="./assets/js/698.cfd86b0f.js"><link rel="prefetch" href="./assets/js/699.99778650.js"><link rel="prefetch" href="./assets/js/7.2921d27b.js"><link rel="prefetch" href="./assets/js/70.f05e19a3.js"><link rel="prefetch" href="./assets/js/700.d74ad1dd.js"><link rel="prefetch" href="./assets/js/701.a8e8d59a.js"><link rel="prefetch" href="./assets/js/702.503a39da.js"><link rel="prefetch" href="./assets/js/703.31cfcf4b.js"><link rel="prefetch" href="./assets/js/704.77cffa8f.js"><link rel="prefetch" href="./assets/js/705.d84b4ef2.js"><link rel="prefetch" href="./assets/js/706.c6394500.js"><link rel="prefetch" href="./assets/js/707.c173bc10.js"><link rel="prefetch" href="./assets/js/708.9a77ae67.js"><link rel="prefetch" href="./assets/js/709.1568c163.js"><link rel="prefetch" href="./assets/js/71.fba6c654.js"><link rel="prefetch" href="./assets/js/710.5df81cf4.js"><link rel="prefetch" href="./assets/js/711.ab7ee73e.js"><link rel="prefetch" href="./assets/js/712.3f33d9f1.js"><link rel="prefetch" href="./assets/js/713.3910b715.js"><link rel="prefetch" href="./assets/js/714.1f7c84c1.js"><link rel="prefetch" href="./assets/js/715.c69707bd.js"><link rel="prefetch" href="./assets/js/72.3ae5507c.js"><link rel="prefetch" href="./assets/js/73.d3d9652a.js"><link rel="prefetch" href="./assets/js/74.2913533d.js"><link rel="prefetch" href="./assets/js/75.5babc446.js"><link rel="prefetch" href="./assets/js/76.4efe94ca.js"><link rel="prefetch" href="./assets/js/77.c70bc0d8.js"><link rel="prefetch" href="./assets/js/78.aec43eb5.js"><link rel="prefetch" href="./assets/js/79.2b05057e.js"><link rel="prefetch" href="./assets/js/8.3fa7f7f3.js"><link rel="prefetch" href="./assets/js/80.581d5777.js"><link rel="prefetch" href="./assets/js/81.3c1de8d1.js"><link rel="prefetch" href="./assets/js/82.88dd64a5.js"><link rel="prefetch" href="./assets/js/83.646e9c9c.js"><link rel="prefetch" href="./assets/js/84.f2bdc471.js"><link rel="prefetch" href="./assets/js/85.378db7ad.js"><link rel="prefetch" href="./assets/js/86.96be7c2d.js"><link rel="prefetch" href="./assets/js/87.9da5711a.js"><link rel="prefetch" href="./assets/js/88.fe759a85.js"><link rel="prefetch" href="./assets/js/89.2f184a4f.js"><link rel="prefetch" href="./assets/js/9.062dd769.js"><link rel="prefetch" href="./assets/js/90.7ed69b9b.js"><link rel="prefetch" href="./assets/js/91.96ad6d5a.js"><link rel="prefetch" href="./assets/js/92.a15dc568.js"><link rel="prefetch" href="./assets/js/93.4aba5e29.js"><link rel="prefetch" href="./assets/js/94.c6826d31.js"><link rel="prefetch" href="./assets/js/95.5baacfdd.js"><link rel="prefetch" href="./assets/js/96.630c2a03.js"><link rel="prefetch" href="./assets/js/97.37212019.js"><link rel="prefetch" href="./assets/js/98.4807f784.js"><link rel="prefetch" href="./assets/js/99.5581ffdd.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.29ffe2f2.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><img src="./img/logo.png" alt="Ashun's 技術駅" class="logo"> <span class="site-name can-hide">Ashun's 技術駅</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/./web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/javascript/" class="nav-link">《JavaScript教程》</a></li><li class="dropdown-subitem"><a href="/./note/js/" class="nav-link">《JavaScript高级程序设计》</a></li><li class="dropdown-subitem"><a href="/./note/es6/" class="nav-link">《ES6 教程》</a></li><li class="dropdown-subitem"><a href="/./note/vue/" class="nav-link">《Vue》</a></li><li class="dropdown-subitem"><a href="/./note/react/" class="nav-link">《React》</a></li><li class="dropdown-subitem"><a href="/./note/typescript-axios/" class="nav-link">《TypeScript 从零实现 axios》</a></li><li class="dropdown-subitem"><a href="/./note/git/" class="nav-link">《Git》</a></li><li class="dropdown-subitem"><a href="/./pages/51afd6/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/./pages/4643cd/" class="nav-link">JS设计模式总结</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="页面" class="dropdown-title"><a href="/./ui/" class="link-title">页面</a> <span class="title" style="display:none;">页面</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/8309a5b876fc95e3/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/./pages/0a83b083bdf257cb/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/./pages/328145/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/./pages/3e8124/" class="nav-link">现代web布局</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/./technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/9a7ee40fc232253e/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/./pages/4c778760be26d8b3/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/./pages/117708e0af7f0bd9/" class="nav-link">Nodejs</a></li><li class="dropdown-item"><!----> <a href="/./pages/41f87d890d0a02af/" class="nav-link">博客搭建</a></li><li class="dropdown-item"><!----> <a href="/./note/TechnicalResources/" class="nav-link">技术资源</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><a href="/./books/" class="link-title">书籍</a> <span class="title" style="display:none;">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>第一阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/d40f65/" class="nav-link">HTML</a></li></ul></li><li class="dropdown-item"><h4>第二阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/JavaScriptEs5/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>第三阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/vue-js/" class="nav-link">Vue</a></li></ul></li><li class="dropdown-item"><h4>第四阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/1c2d83/" class="nav-link">实战项目</a></li></ul></li><li class="dropdown-item"><h4>每周测试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/12f2fe/" class="nav-link">每周</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/vue-UI/" class="nav-link">Vue引入UI框架</a></li><li class="dropdown-subitem"><a href="/./note/interview/" class="nav-link">Web前端面试</a></li><li class="dropdown-subitem"><a href="/./note/Vue3-resource/" class="nav-link">Vue3-resource</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/./more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/./pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/./pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/./pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/./note/zsrq/" class="nav-link">福利资源</a></li><li class="dropdown-item"><!----> <a href="/./friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/./about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/./pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/./archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/./tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/./archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.jpg"> <div class="blogger-info"><h3>Ashun</h3> <span>前端界的小学生</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/./" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/./web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/javascript/" class="nav-link">《JavaScript教程》</a></li><li class="dropdown-subitem"><a href="/./note/js/" class="nav-link">《JavaScript高级程序设计》</a></li><li class="dropdown-subitem"><a href="/./note/es6/" class="nav-link">《ES6 教程》</a></li><li class="dropdown-subitem"><a href="/./note/vue/" class="nav-link">《Vue》</a></li><li class="dropdown-subitem"><a href="/./note/react/" class="nav-link">《React》</a></li><li class="dropdown-subitem"><a href="/./note/typescript-axios/" class="nav-link">《TypeScript 从零实现 axios》</a></li><li class="dropdown-subitem"><a href="/./note/git/" class="nav-link">《Git》</a></li><li class="dropdown-subitem"><a href="/./pages/51afd6/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/./pages/4643cd/" class="nav-link">JS设计模式总结</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="页面" class="dropdown-title"><a href="/./ui/" class="link-title">页面</a> <span class="title" style="display:none;">页面</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/8309a5b876fc95e3/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/./pages/0a83b083bdf257cb/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/./pages/328145/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/./pages/3e8124/" class="nav-link">现代web布局</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/./technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/9a7ee40fc232253e/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/./pages/4c778760be26d8b3/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/./pages/117708e0af7f0bd9/" class="nav-link">Nodejs</a></li><li class="dropdown-item"><!----> <a href="/./pages/41f87d890d0a02af/" class="nav-link">博客搭建</a></li><li class="dropdown-item"><!----> <a href="/./note/TechnicalResources/" class="nav-link">技术资源</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><a href="/./books/" class="link-title">书籍</a> <span class="title" style="display:none;">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>第一阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/d40f65/" class="nav-link">HTML</a></li></ul></li><li class="dropdown-item"><h4>第二阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/JavaScriptEs5/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>第三阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/vue-js/" class="nav-link">Vue</a></li></ul></li><li class="dropdown-item"><h4>第四阶段</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/1c2d83/" class="nav-link">实战项目</a></li></ul></li><li class="dropdown-item"><h4>每周测试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./pages/12f2fe/" class="nav-link">每周</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/./note/vue-UI/" class="nav-link">Vue引入UI框架</a></li><li class="dropdown-subitem"><a href="/./note/interview/" class="nav-link">Web前端面试</a></li><li class="dropdown-subitem"><a href="/./note/Vue3-resource/" class="nav-link">Vue3-resource</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/./more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/./pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/./pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/./pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/./note/zsrq/" class="nav-link">福利资源</a></li><li class="dropdown-item"><!----> <a href="/./friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/./about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/./pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/./archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/./tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/./archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>现代web布局</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/./pages/3e8124/" class="sidebar-link">01Web 布局技术演进：了解 Web 布局发展史</a></li><li><a href="/./pages/5039fe/" class="sidebar-link">现代 Web 布局技术术语</a></li><li><a href="/./pages/abdd60/" class="sidebar-link">Flexbox 布局基础使用</a></li><li><a href="/./pages/379fd6/" class="sidebar-link">Flexbox 布局中的对齐方式</a></li><li><a href="/./pages/79cb20/" class="sidebar-link">Flexbox 布局中的 flex 属性的基础运用</a></li><li><a href="/./pages/e7b2d6/" class="sidebar-link">Flexbox 中的计算：通过扩展因子比例来扩展 Flex 项目</a></li><li><a href="/./pages/94aead/" class="sidebar-link">Flexbox 中的计算：通过收缩因子比例收缩 Flex 项目</a></li><li><a href="/./pages/60a9f7/" class="sidebar-link">Flexbox 布局中的 flex-basis：谁能决定 Flex 项目的大小？</a></li><li><a href="/./pages/a5b9c3/" class="sidebar-link">使用 Flexbox 构建经典布局：10 种经典 Web 布局</a></li><li><a href="/./pages/720d34/" class="sidebar-link">Grid 布局的基础知识</a></li><li><a href="/./pages/aef398/" class="sidebar-link">定义一个网格布局</a></li><li><a href="/./pages/5faf07/" class="sidebar-link">Grid 布局中的计算</a></li><li><a href="/./pages/0b6d4d/" class="sidebar-link">可用于 Grid 布局中的函数</a></li><li><a href="/./pages/5c2f3b/" class="sidebar-link">网格项目的放置和层叠</a></li><li><a href="/./pages/8f9dcb/" class="sidebar-link">Grid 布局中的对齐方式</a></li><li><a href="/./pages/7c5b48/" class="sidebar-link">网格布局中的子网格和嵌套网格</a></li><li><a href="/./pages/cc259c/" aria-current="page" class="active sidebar-link">使用子网格构建 Web 布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#卡片组件的布局" class="sidebar-link">卡片组件的布局</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#品牌页-区-布局" class="sidebar-link">品牌页（区）布局</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#图片墙" class="sidebar-link">图片墙</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#交叉叠加布局" class="sidebar-link">交叉叠加布局</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#百分百宽度的条纹布局" class="sidebar-link">百分百宽度的条纹布局</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#时间轴-timeline-组件" class="sidebar-link">时间轴（Timeline）组件</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#表单布局" class="sidebar-link">表单布局</a></li><li class="sidebar-sub-header level2"><a href="/./pages/cc259c/#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/./pages/bc56a8/" class="sidebar-link">使用 Grid 构建经典布局：10 种经典布局</a></li><li><a href="/./pages/a587de/" class="sidebar-link">使用 Grid 构建创意性 Web 布局</a></li><li><a href="/./pages/3427f9/" class="sidebar-link">Flexbox or Grid：如何选择合适的布局？</a></li><li><a href="/./pages/3d1da3/" class="sidebar-link">display：contents 改变 Flexbox 和 Grid 布局模式</a></li><li><a href="/./pages/575beb/" class="sidebar-link">Web 中的向左向右：Flexbox 和 Grid 布局中的 LTR 与 RTL</a></li><li><a href="/./pages/05cb29/" class="sidebar-link">Web 中的向左向右：Web 布局中 LTR 切换到 RTL 常见错误</a></li><li><a href="/./pages/5d54f6/" class="sidebar-link">内在 Web 设计</a></li><li><a href="/./pages/e11b29/" class="sidebar-link">创建不规则 Web 布局</a></li><li><a href="/./pages/f2f4c6/" class="sidebar-link">如何构建响应式 UI？</a></li><li><a href="/./pages/aa1381/" class="sidebar-link">下一代响应式 Web 设计：组件式驱动式 Web 设计</a></li><li><a href="/./pages/13dbe6/" class="sidebar-link">下一代响应式 Web 设计：容器查询</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-0c557b5e><div class="articleInfo" data-v-0c557b5e><ul class="breadcrumbs" data-v-0c557b5e><li data-v-0c557b5e><a href="/./" title="首页" class="iconfont icon-home router-link-active" data-v-0c557b5e></a></li> <li data-v-0c557b5e><a href="/./ui/#页面" data-v-0c557b5e>页面</a></li><li data-v-0c557b5e><a href="/./ui/#现代web布局" data-v-0c557b5e>现代web布局</a></li></ul> <div class="info" data-v-0c557b5e><div title="作者" class="author iconfont icon-touxiang" data-v-0c557b5e><a href="/docs" target="_blank" title="作者" class="beLink" data-v-0c557b5e>ashun</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-0c557b5e><a href="javascript:;" data-v-0c557b5e>2023-06-01</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">使用子网格构建 Web 布局<!----></h1>  <div class="theme-vdoing-content content__default"><h3 id="本资源由-itjc8-com-收集整理"><a href="#本资源由-itjc8-com-收集整理" class="header-anchor">#</a> 本资源由 itjc8.com 收集整理</h3> <p>我们花了一节课（《<a href="https://juejin.cn/book/7161370789680250917/section/7160657953932967967" target="_blank" rel="noopener noreferrer">网格布局中的子网格和嵌套网格<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>》）专门介绍了网格布局中的子网格和嵌套网格的基础知识。并且阐述了为什么需要子网格布局。这节课，我将带领大家了解子网格的一些潜在案例，即子网格可用于哪些 Web 中布局中。</p> <h2 id="卡片组件的布局"><a href="#卡片组件的布局" class="header-anchor">#</a> 卡片组件的布局</h2> <p>在 Web 布局中，常常会用到卡片组件，子网格来构建卡片组件布局是很有用的。接下来，我们一起来看两种卡片组件的布局。先来看第一种：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/083ae04152f24fd2a9347c2cfb246a1e~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/zYaKmpZ" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/zYaKmpZ<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>相邻卡片是在块轴（Block Axis）方向（垂直方向）堆叠的，并且每张卡片都包括：</p> <ul><li>标题；</li> <li>缩略图；</li> <li>描述文本；</li> <li>媒体列表。</li></ul> <p>它的基本结构如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;cards&quot;&gt;&lt;!-- grid --&gt;
+    &lt;div class=&quot;card&quot;&gt;&lt;!-- subgrid --&gt;
+        &lt;h3&gt;标题&lt;/h3&gt;
+        &lt;img src=&quot;&quot; alt=&quot;缩略图&quot; /&gt;
+        &lt;p&gt;描述文本&lt;/p&gt;
+        &lt;span&gt;列表1&lt;/span&gt;
+        &lt;span&gt;列表2&lt;/span&gt;
+        &lt;span&gt;列表3&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>卡片容器 <code>.cards</code> 分为五列，行随卡片 <code>.card</code> 的数量自动增加：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.cards {
+    display: grid;
+    
+    grid-template-columns: 
+        minmax(7em, 12em) 
+        repeat(3, max-content)
+        1fr;
+    row-gap: 2rem;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>第一列列轨道设置尺寸是 <code>minmax(7em, 12em)</code> ，这样做是让卡片上缩略图的大小控制在 <code>7em ~ 12em</code> 之间。由于媒体导航项的内容大小我们并不知，因此这里使用 <code>max-content</code> 来控制，最后一列设置 <code>1fr</code> ，将可用空间都留给这个列：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/399b5dacf7b9465db3114c6ab268e098~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>每张卡片（<code>.card</code>）它跨越五列（<code>grid-column: 1 / -1</code> 或 <code>grid-column: 1 / span 5</code>），可以在 <code>.card</code> 的 <code>grid-template-columns</code> 设置 <code>subgrid</code> ，继承父网格（<code>.cards</code>）的列轨道尺寸。另外在子网格上使用 <code>grid-template-rows</code> 重新定义自己的行网格轨道尺寸：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card {
+    display: inherit;
+    
+    grid-template-columns: subgrid;
+    grid-template-rows: min-content max-content min-content;
+    
+    column-gap: 1em;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/455fdf53a2b9491184a716729db90793~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>创建好网格之后，卡片中的标题（<code>h3</code> ）、描述文本（<code>p</code>）、缩略图（<code>img</code>）和导航列表项（<code>span</code>）就可以根据子网格（<code>.card</code>）的网格线名称放置到指定位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>h3 {
+    grid-column: 1 / -1;
+}
+
+p {
+    grid-column: 2 / -1;
+}
+
+img {
+    grid-row: 2 / -1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>另一个卡片组件是像下图这样的，在内联轴方向平铺：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25268de6eed946a1a2fb2eae6832658e~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/abKmQWj" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/abKmQWj<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>其实前面有一个示例类似这种卡片组件的布局。只不过这个示例，我改了一下，让其变得稍微复杂那么一点。上面布局所需的 HTML 结构如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;cards&quot;&gt;&lt;!-- grid --&gt;
+    &lt;div class=&quot;card&quot;&gt;&lt;!-- subgrid --&gt;
+        &lt;div class=&quot;media&quot;&gt;&lt;!-- subgrid --&gt;
+            &lt;img src=&quot;avatar.jpg&quot; alt=&quot;media object&quot; /&gt;
+            &lt;p&gt;Media Content&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+        &lt;img src=&quot;card--figure.jpg&quot; alt=&quot;card figure&quot; /&gt;
+        &lt;p&gt;Card Describe&lt;/p&gt;
+        &lt;svg&gt;Like Icon&lt;/svg&gt;
+        &lt;button&gt;More Button&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- 省略的 card --&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>在最外层的卡片容器（<code>.cards</code>）上使用了 RAM 布局技术，让卡片在卡片容器中能能够根据空间自动断行，并且根据卡片组件的需要，使用 <code>grid-template-rows</code> 定义行网格轨道尺寸和数量：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100% - 2rem, 18rem), 1fr));
+    grid-template-rows: min-content min-content minmax(10rem, 14rem) auto auto;
+    gap: 4rem;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a36815091a0c40d29f0445c5691c9167~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>每张卡片 <code>.card</code> 是父网格（<code>.cards</code>）的一个子网格，跨越父网格五行，并且继承父网格行网格轨道，不同的是重新定义了网格列轨道数量和尺寸，同时为了让卡片中的每个元素更易于放置，使用 <code>grid-template-areas</code> 在子网格上显式定义了网格区域名称。并且显式设置<code>gap</code> 值为 <code>0</code> ，重置了子网格轨道之间的间距：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card {
+  grid-row: span 5;
+
+  display: inherit;
+  grid-template-columns: 1rem min-content 1fr min-content 1rem;
+  grid-template-rows: subgrid;
+  grid-template-areas:
+    &quot;.       media    media    media .&quot;
+    &quot;.       title    title    title .&quot;
+    &quot;figure  figure   figure   figure    figure&quot;
+    &quot;.       describe describe describe  .&quot;
+    &quot;.       like     .        button    .&quot;;
+  gap: 0;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2eda52a75ef34697aab07f7b4d814cdd~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>卡片中的每个网格项目就可以使用 <code>grid-area</code> 来指定位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.media {
+    grid-area: media;
+}
+
+h3 {
+    grid-area: title;
+}
+
+.card &gt; img {
+    grid-area: figure;
+}
+
+.card &gt; p {
+    grid-area: describe;
+}
+
+.card svg {
+    grid-area: like;
+}
+
+.card button {
+    grid-area: button;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>在这个示例中，网格 <code>.card</code> 既是网格 <code>.cards</code> 的子网格，又是网格 <code>.media</code> 的父网格。因为，在 <code>.media</code> （网格项目）上也使用 <code>display: inherit</code> 定义了一个网格，同时继承其父网格 <code>.card</code> 的列网格轨道：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.media {
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-areas: &quot;des    des    avatar&quot;;
+    align-items: center;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6dca94529b7344048ab48553992286e7~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>在<code>.media</code> 网格中的网格项目也可以使用 <code>grid-area</code> 放置到对应的网格区域中，因为我们在 <code>.media</code> 中使用 <code>grid-template-areas</code> 创建了网格区域：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.media p {
+  grid-area: des;
+}
+
+.media img {
+  grid-area: avatar;
+  justify-self: end;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>使用子网格<code>subgrid</code> 来构建卡片组件时，不管哪个网格项目的内容增加还是减少，卡片中的每个区域都可以对齐，让你的卡片组件整体视觉是好看的！</p> <p>事实上，这种布局技术还可以用于 Web 上其他地方，比如页脚的导航、下拉菜单等：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3bb29df201de4ceb810755e19abc4d20~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>就拿页脚导航为例吧。构建这样的布局，你可能需要一个像下面这样的 HTML 结构：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;body&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
+        &lt;footer class=&quot;menu&quot;&gt;
+            &lt;div class=&quot;menu__item&quot;&gt;
+                &lt;h3 class=&quot;menu__heading&quot;&gt;Title&lt;/h3&gt;
+                &lt;ul class=&quot;menu__lists&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- 省略其他 menu__item --&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>我们要的是这样的一个效果：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/913208cb97e74c3189b7e8dadfe8a31b~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <ul><li>列数能够根据视窗大小自动调整，即自动断行；</li> <li>导航菜单中，同一行中的区域，其标题与标题对齐，菜单项与菜单项对齐。</li></ul> <p>实现第一个要求，在 CSS 网格布局中很简单，只需要使用 RAM 布局技术即可。但没有子网格（<code>subgrid</code>）的话，第二个要求实现起来就比较难，你得到的效果将会像下图这样：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45866cc5f95f4bf99064eb96fbe667ba~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>你可以像上面卡片示例一样，将 <code>.menu</code> 和 <code>.menu__item</code> 都定义为网格，而且 <code>.meun__item</code> 网格是 <code>.menu</code> 网格的子网格，在子网格 <code>.menu__item</code> 跨越两行，并且设置它的 <code>grid-template-rows</code> 值为 <code>subgrid</code> 。这样做是让子网格继承父网格的行网格轨道，当子网格行网格轨道尺寸变大时，它的父网格行网格轨道也会变大。你就可以实现第二个要求。</p> <p>整个页脚导航的布局效果，除了运用了 CSS 子网格、RAM 布局技术之外，还使用了 Full-Bleed 布局技术，有关于布局的详细代码如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/* Full-Bleed 布局技术 */
+body {
+    --limit-max-container-width: 1024px;
+    --limit-min-container-width: 320px;
+    --gutter: 1rem;
+    
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter), 1fr)
+        minmax(
+            min(var(--limit-min-container-width), 100% - var(--gutter) * 2),
+            var(--limit-max-container-width)
+        )
+        minmax(var(--gutter), 1fr);
+    row-gap: var(--gutter);
+}
+
+.wrapper {
+    /* 从第一列跨越到最后一列*/
+    grid-column: 1 / -1;
+
+    display: inherit;
+  
+    /* 继承父网格 body 的网格特性*/
+    grid-template-columns: subgrid;
+}
+
+footer {
+    /* 将 footer 放置在中间列 */
+    grid-column: 2 / 3;
+
+    display: inherit;
+
+    /* 使用 RAM 布局技术，实现网格项目的自动断行 */
+    grid-template-columns: repeat(auto-fit, minmax(min(100% - 2rem, 20rem), 1fr));
+    gap: 2rem;
+}
+
+.menu__item {
+    /* 每个网格项目跨越两行，标题一行，菜单项一行 */
+    grid-row: span 2;
+
+    display: inherit;
+    
+    /* 继承父网格 footer 的网格特性 */
+    grid-template-rows: subgrid;
+    row-gap: 1rem;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><p>不难发现，示例中的 <code>body</code> 、<code>.wrapper</code> 、<code>footer</code> 和 <code>.menu__item</code> 都是网格，它们之间的关系是：</p> <ul><li><code>.wrapper</code> 网格是 <code>body</code> 网格的子网格，并且在 <code>.wrapper</code> 上设置了 <code>grid-template-columns</code> 值为 <code>subgrid</code> ，<code>.wrapper</code> 网格将继承父网格 <code>body</code> 的列网格轨道数量和尺寸。</li> <li><code>footer</code> 网格嵌套在 <code>.wrapper</code> 网格内，但并没有在 <code>grid-template-columns</code> 或 <code>grid-template-rows</code> 属性上显式设置值为 <code>subgrid</code> ，因此它们只是嵌套关系，<code>footer</code> 和 <code>.wrapper</code> 是两个独立的网格。</li> <li><code>.menu__item</code> 网格是 <code>footer</code> 网格的子网格， <code>.menu__item</code> 项目跨越两行，同时将其 <code>grid-template-rows</code> 属性设置为 <code>subgrid</code> ，因此它将继承其父网格 <code>footer</code> 的行网格轨道特性。页脚菜单每一栏的标题相互对齐，菜单项相互对齐。</li></ul> <p>你最终看到的效果如下：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/659526f8e7d64e459e50dbaf562aad28~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/poKNLbE" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/poKNLbE<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>感兴趣的同学，可以使用同样的技术（RAM 布局技术和子网格布局）来实现下图中下拉导航的布局：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0d4330200d84a579a2b8ae9d34fba7f~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <h2 id="品牌页-区-布局"><a href="#品牌页-区-布局" class="header-anchor">#</a> 品牌页（区）布局</h2> <p>在 Web 页面的设计中，常常会有通栏的横幅的设计效果，往往把这种效果称为 <strong>Branding</strong> 。如下图所示：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fcb8b31b500a4760ac2e15ff0fa1e7b1~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>它包含了三个部分：</p> <ul><li>标题（Headline）；</li> <li>特色功能区（Featured Section）；</li> <li>普通卡片区（Card）。</li></ul> <p>它的 HTML 结构可以像下面这样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;section class=&quot;branding&quot;&gt;
+    &lt;div class=&quot;headline&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;featured&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>当然，你可以根据自己需要往相应的区域继续填充内容，比如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;section class=&quot;branding&quot;&gt;
+    &lt;div class=&quot;headline&quot;&gt;
+        &lt;h3&gt;主标题&lt;/h3&gt;
+        &lt;h4&gt;次标题&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;featured&quot;&gt;
+        &lt;div class=&quot;featured__content&quot;&gt;&lt;!-- 内容区域 --&gt;
+            &lt;h3&gt;特色功能区域:标题&lt;/h3&gt;
+            &lt;blockquote&gt;特色功能区域：描述文本&lt;/blockquote&gt;
+        &lt;/div&gt;
+        &lt;figure class=&quot;featured__thumbnail&quot;&gt;
+            &lt;img src=&quot;featured--thumbnail.jpg&quot; alt=&quot;特色功能区域缩略图&quot; /&gt;
+        &lt;/figure&gt;    
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;figure&gt;
+            &lt;img src=&quot;card--thumbnail.jpg&quot; alt=&quot;卡片缩略图&quot; /&gt;
+        &lt;/figure&gt;
+        &lt;h3&gt;卡片标题&lt;/h3&gt;
+        &lt;p&gt;卡片描述文本&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>假设设计师将整个 Branding 区域<strong>均分为五列</strong> ，除了“特色功能区域（Featured Section）” 占了三列之外，其他两个区域（Headline 和 Card）只各占一列，如下图所示：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efe64e47f4264ef4b9739f66871ea895~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>使用网格布局很容易就将它均分成五份，使用网格线可以将它们放置到指定的区域：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.branding {
+    display: grid;
+    
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.featured {
+    grid-column: 2 / span 3;
+}
+
+.card {
+    grid-column: 5;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><code>.featured</code> 网格项目（即 “特色功能区域” ）的 <code>grid-column</code> 属性设置了 <code>2 / span 3</code> 值，表示它将放置在列网格线<code>2</code> （起始位置），并且向右合并三列（<code>span 3</code>），相当于 <code>grid-column: 2 / 5</code> ，即从第二列起始网格线跨越到第五列起始网格线。</p> <p>为了让 <code>.featured</code> 网格项目能继承父网格（<code>.branding</code>）的网格特性，得到更好的控制，需将其设置为一个子网格（<code>display</code> 设置为 <code>inherit</code> 或 <code>grid</code> ），并且将其 <code>grid-tempalte-columns</code> 设置为 <code>subgrid</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.featured {
+    grid-column: 2 / span 3;
+    
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>为了能更好地放置该网格中的网格项目（“特色功能区域”中的内容<code>.featured__content</code> 和缩略图 <code>.featured__thumbnail</code>），你还可以显式设置 <code>grid-template-areas</code> 属性的值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.featured {
+    grid-column: 2 / span 3;
+    
+    display: inherit;
+    grid-template-columns: subgrid;
+    
+    grid-template-areas: &quot;content thumbnail thumbnail&quot;;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>内容区域占一列，缩略图占两列：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d1ce51ed1454125b86244b0c0a5b36c~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.featured__content {
+    grid-area: content;
+}
+
+.featured__thumbnail {
+    grid-area: thumbnail;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/oNyzOYj" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/oNyzOYj<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>这样做，“特色功能区”中的主内容列和缩略图列，能与其父网格（<code>.branding</code>）所对应的列完全匹配，列轨道大小、列间距等。这一切都要归功于子网格（<code>subgrid</code>）的功能。</p> <p>在这个基础上，你还可以稍微加点内容，改变一下结构，就可以构建出一个 Landing Page 页的布局效果：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac78cb4075084d77bbb940fcd8dee964~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/abKBLGJ" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/abKBLGJ<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>在前一个示例的“特色功能区域”下面新增一个“标题”、“列表”和“按钮”，你可以考虑用一个 <code>&lt;div&gt;</code> 来包裹它们：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;landing&quot;&gt;
+    &lt;div class=&quot;headline&quot;&gt;...&lt;/div&gt;
+    
+    &lt;!-- 使用一个 div 将特色功能区域、新增的标题、列表和按钮包裹起来 --&gt;
+    &lt;div class=&quot;featured--section&quot;&gt;
+        &lt;div class=&quot;featured&quot;&gt;&lt;!-- 特色功色区域结构不变 --&gt;&lt;/div&gt;
+        &lt;h3&gt;新增标题&lt;/h3&gt;
+        &lt;ul&gt;&lt;!-- 新增列表 --&gt;
+            &lt;li&gt;
+                &lt;span&gt;01&lt;/span&gt;
+                &lt;p&gt;列表内容&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;!-- 此处省略两个一样的 li --&gt;    
+        &lt;/ul&gt;
+        &lt;button&gt;新增按钮&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>在前面的基础上稍微调整了一下网格的定义：</p> <ul><li>在 <code>.landing</code> 上定义了一个四行五列（<code>4 x 5</code>）的网格，这是最外层的主网格，和前面示例相比，这里显式定义网格的行网格轨道的数量和尺寸。</li> <li>将新增的 <code>.featured--section</code> 容器合并三列四行，同时将 <code>grid-template-rows</code> 和 <code>grid-template-columns</code> 定义为 <code>subgrid</code> ，让该子网格继承其父网格 <code>.landing</code> 的网格特性。</li> <li>在 <code>.featured--section</code> 的 <code>.featured</code> 和 <code>ul</code> （列表）也是一个子网格，它们都跨越三列，继承父网格 <code>.featured--section</code> 网格轨道。</li></ul> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/772204318c0a42b4a9713087480ba30e~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.landing {
+    display: grid;
+
+    /* 主（父）网格，创建一个四行五列的网格 */
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    
+    gap: 1rem;
+}
+
+/* 子网格 */
+.featured--section {
+    /* 合并三列四行 */
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 4;
+    
+    display: inherit;
+    
+    /* 继承父网格 .landing 的网格轨道数量和尺寸 */
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+
+    /* 重置子网格的行网格轨道之间间距，子网格的列网格之间间距继承父网格的列网格轨道的间距 */
+    row-gap: 1rem;
+}
+
+.featured {
+    grid-column: 1 / span 3;
+
+    display: inherit;
+    
+    /* 继承父网格 .featured--section 的列网格轨道 */
+    grid-template-columns: subgrid;
+    
+    /* 显式给子网格命名网格区域名称 */
+    grid-template-areas: &quot;content thumbnail thumbnail&quot;;
+}
+
+.featured__content {
+    grid-area: content;
+    align-self: center;
+}
+
+.featured__thumbnail {
+    grid-area: thumbnail;
+}
+
+.featured--section &gt; h3 {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    place-self: center;
+}
+
+
+ul {
+    grid-column: 1 / span 3;
+
+    display: inherit;
+     
+     /* 继承父网格 .featured--section 的列网格轨道  */
+    grid-template-columns: subgrid;
+}
+
+ul li {
+    display: inherit;
+    
+    /* 创建嵌套网格，不会继承父网格任何特性，是一个独立的网格 */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2rem 1fr 2rem;
+    gap: 10px;
+}
+
+ul span {
+    grid-area: 1 / 2 / 4 / 3;
+    place-self: center;
+}
+
+ul p {
+    grid-area: 2 / 2 / 3 / 4;
+    z-index: 2;
+}
+
+button {
+  grid-column: 2;
+}
+
+.card {
+  grid-column: 5;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br></div></div><p>注意，示例中列表项的布局效果是一种<strong>交叉叠加</strong>的布局，这里采用了嵌套网格来实现，如果你感兴趣的话，可以尝试使用子网格来实现。</p> <p>在“特色功能区域”中还可以与 CSS 的多列布局结合在一起，构建类似一个简单的报刊类的布局：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7144d19abba44e079f220f0b33d466d8~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/GRGNyVO" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/GRGNyVO<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>实现上图布局效果，HTML 结构调整并不大：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;section class=&quot;branding&quot;&gt;
+    &lt;div class=&quot;headline&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;featured&quot;&gt;
+        &lt;h3 class=&quot;featured__title&quot;&gt;特色功能区域:标题&lt;/h3&gt;
+        &lt;figure class=&quot;featured__thumbnail&quot;&gt;
+            &lt;img src=&quot;featured--thumbnail.jpg&quot; alt=&quot;特色功能区域缩略图&quot; /&gt;
+        &lt;/figure&gt;    
+        &lt;div class=&quot;featured__content&quot;&gt;&lt;!-- 内容区域 --&gt;
+           &lt;blockquote&gt;特色功能区域：描述文本&lt;/blockquote&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+&lt;/section&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>只是把 <code>.featured</code> 网格区域的名称和结构做了一下调整：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.featured {
+    grid-column: 2 / span 3;
+    
+    display: inherit;
+    grid-template-columns: subgrid;
+    
+    grid-template-areas: 
+       &quot;title   thumbnail thumbnail&quot;
+       &quot;content content   content&quot;;
+}
+
+.featured__content {
+    grid-area: content;
+}
+
+.featured__thumbnail {
+    grid-area: thumbnail;
+}
+
+.featured__title {
+    grid-area: title;
+    place-self: center;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad4801c8b6324cf882d4dca6ad05fc24~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>示例中，在内容区域<code>.featured__content</code> 使用 CSS 多列布局中的 <code>column-count</code> 、<code>column-gap</code> 和 <code>column-rule</code> 将其分成三列布局：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.featured__content {
+    column-count: 3;                   /* 设置列数 */
+    column-gap: 1rem;                  /* 设置列间距 */
+    column-rule: 1px dashed aliceblue; /* 设置列之间分隔线 */
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="图片墙"><a href="#图片墙" class="header-anchor">#</a> 图片墙</h2> <p>子网格用来构建图片墙也是很有用的，比如下图这样的布局，左侧有一个内容区域，它包含了一个标题和一段描述文本，右侧是九宫的图片展示区：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad67a745e17f409090f010d0f9631f54~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>上图仅是图片墙的一种排列网格，其实右侧你可以根据自己的需要，设计出不同的九宫格网格，甚至是比九宫格风格复杂繁多的宫格，比如下图这些延伸的风格：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6b9538a3e5b43cc9e3a50d6c39e67f6~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>当然，你可能会说，不使用子网格也可以构建出所期望的图片墙的布局效果。的确如此，不使用子网格，你需要创建一个复杂的网格。如果使用子网格，你更多的关注点是在右图宫格的布局上，而这种九宫格的布局风格，CSS 网格是有天然优势的。</p> <p>构建上面展示的图片墙布局效果，所需要的 HTML 结构如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;gallery&quot;&gt;&lt;!-- 父网格 --&gt;
+    &lt;div class=&quot;gallery__content&quot;&gt;
+        &lt;h3&gt;Gallery Title&lt;/h3&gt;
+        &lt;p&gt;Gallery Describe&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gallery__photo&quot;&gt;&lt;!-- 子网格 --&gt;
+        &lt;img src=&quot;gallery-photo.jpg&quot; alt=&quot;图片&quot; /&gt;
+        &lt;!-- 省略其他的 img --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>设计师将整个图片墙组件分成六列，内图和图片各占三列。右侧的图片展示区是一个三列 <code>N</code> 行的网格（行数<code>N</code> 会随图片增加而自动增加，即创建隐式的行网格轨道）。在这个示例中，将右侧图片展示区<code>.gallery__photo</code> 定义为 <code>.gallery</code> 网格的子网格，并且继承父网格的列网格轨道特性。</p> <p>有关于布局的 CSS 代码如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.gallery {
+    display: grid;
+    gap: 2rem;
+    
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gallery__content {
+    grid-column: 1 / span 3;
+    place-self: center;
+}
+
+.gallery__photo {
+    grid-column: 4 / span 3;
+    
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: minmax(auto, 180px);
+    row-gap: 1rem;
+    
+    grid-auto-flow: dense;
+}
+
+.gallery__photo img:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+}
+
+.gallery__photo img:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+
+.gallery__photo img:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2 / 3;
+}
+
+.gallery__photo img:nth-child(4) {
+    grid-row: 1 / span 2;
+    grid-column: 3 / 4;
+}
+
+.gallery__photo img:nth-child(5) {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 3;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fda3f46191f84215b81b3223b6b07d8e~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/eYKggqV" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/eYKggqV<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>你可以尝试着将右侧九宫格替换成你自己希望要的风格。</p> <h2 id="交叉叠加布局"><a href="#交叉叠加布局" class="header-anchor">#</a> 交叉叠加布局</h2> <p>不知道你平时浏览 Web 页面或 Web 设计，有没有留意到，Web 页面元素相互交叉叠加的布局效果越来越频繁，比如：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89c2da1b3ec142b4823ee41d57b339b5~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>在还没有 CSS 网格布局技术之前，Web 开发者一般都是采用绝对定位来构建。虽然绝对定位可以实现上图中交叉叠加的布局效果，但缺乏灵活性和适配性，无法较好地适配更多的终端设备。不过，使用 CSS 网格布局，尤其是结合子网格特性，就显得要容易得多，而且适配性、灵活性都要比绝对定位强很多。</p> <p>我们一起来看一个很有创意性的示例，这个示例是 <a href="https://codepen.io/michellebarker/full/JjGNdNY" target="_blank" rel="noopener noreferrer">@Michelle Barker 在 Codepen 上写的<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，我觉得很有创意，就拿来和大家一起探讨。示例的效果如下：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cc1ca79ec2647ee8dac6fc5fb7a4b4a~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/poKRPxz" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/poKRPxz<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 注意，上图这个效果是在 <a href="https://codepen.io/michellebarker/full/JjGNdNY" target="_blank" rel="noopener noreferrer">@Michelle Barker <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>提供的案例上做了改良的 ！</p></blockquote> <p>基于卡片的 UI 是 Web 页同上常见的一种设计模式，但构建一个需要悬浮（<code>:hover</code>）或获得焦点（<code>:focus</code>）效果应用于整个卡片的 UI 并不常见。像上图这种交互效果，很多 Web 开发者往往会采用一种粗暴的策略，即在整个卡片的悬浮或获得焦点状态时，改变相应元素的 UI 效果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card:hover img,
+.card:focus img {
+    /* 卡片悬浮或获得焦点状态下改变 img 样式*/
+}
+
+.card:hover .card__content,
+.card:focus .card__content {
+    /* 卡片悬浮或获得焦点状态下改变 卡片内容样式 */
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>这种策略有一个显著的缺点，鼠标只要悬浮到卡片上（或只要卡片获得焦点），相应的图片和卡片内容样式就会发生改变。这种策略实现的效果是不符合 Web 设计师预期的。</p> <p>因为 Web 设计预期的效果是 “鼠标悬浮到图片或卡片内容时，才改变相应的样式”（如上图所示）。为了达到这样的交互效果，我们添加了一个空的链接标签<code>&lt;a&gt;</code> ，并且使用其伪元素 <code>::before</code> 和 <code>::after</code>来生成一个空白区域，分别遮盖在卡片的图片和内容区域上面：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22a63f3a5d794cce86743b4fa9fc4739~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.link:hover ~ img,
+.link:focus ~ img {
+     /* 链接悬浮或获得焦点状态下改变图片样式 */
+}
+.link:hover ~ .grid__card,
+.link:focus ~ .grid__card {
+    /* 链接悬浮或获得焦点状态下改变卡片内容样式 */
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>类似下图这样的一个效果就实现了：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e991d1fbc883462da7e33a78fdda8065~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/shadeed/full/jOOwwpY/66e9c2039b50463d96a2a9832f05ec0f" target="_blank" rel="noopener noreferrer">https://codepen.io/shadeed/full/jOOwwpY/66e9c2039b50463d96a2a9832f05ec0f<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>伪元素实现该交互效果的详细介绍并不是我们这个课程要介绍的重点，如果你对这种技术感兴趣，可以移步阅读 @Ahmad Shadeed的《<a href="https://ishadeed.com/article/unusual-use-cases-pseudo-elements/" target="_blank" rel="noopener noreferrer">Uncommon Use Cases For Pseudo Elements<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>》，或早前我整理的一篇关于 CSS 伪元素的教程《<a href="https://www.w3cplus.com/css/use-case-pseudo-elements.html" target="_blank" rel="noopener noreferrer">伪元素能帮我们做些什么？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>》。</p> <p>如今我们知道实现这种交互效果的技术方案了，但还需要一个更灵活的布局。以往一般采用的是绝对定位，将伪元素分别定位到图片和内容区域的上面。刚才提到过了，它是有缺陷的，很多时候我们并不知道输出的图片、内容区域大小。</p> <p>庆幸的是，使用 CSS 网格布局，这一切就显得那么简单。你实现这个卡片，可能会需要一个像下面这样的 HTML 结构：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;grid&quot;&gt;
+    &lt;!-- 这个空链接标签很重要，实现交互效果我们需要用到它的伪元素，另外该标签一定要放在图片和卡片内容标签前面 --&gt;
+    &lt;a href=&quot;&quot; class=&quot;link&quot;&gt;&lt;/a&gt;
+    
+    &lt;!-- 卡片上的缩略图 --&gt;
+    &lt;div class=&quot;grid__img&quot;&gt;
+        &lt;img src='https://picsum.photos/800?random=5' alt='卡片图片'&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 卡片上的内容 --&gt;
+    &lt;div class=&quot;grid__card&quot;&gt;
+        &lt;h2&gt;卡片标题&lt;/h2&gt;
+        &lt;p&gt;卡片描述文本&lt;/p&gt;
+        
+        &lt;!-- 这是链接提示文案 --&gt;
+        &lt;span class=&quot;fake-link&quot;&gt;阅读更多&lt;span&gt;→&lt;/span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面结构看上去很简单，但其中有一个细节尤其重要。添加了一个空的链接标签<code>&lt;a&gt;</code> ，它的位置必须放置在卡片图片 <code>.grid__img</code> 和 卡片内容 <code>.grid__card</code> 的前面。我们将使用 CSS 的相邻选择器（<code>E ~ F</code>）来选中它们：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.link:hover ~ .grid__img,
+.link:focus ~ .grid__img {
+    
+}
+
+.link:hover ~ .grid__card,
+.link:focus ~ .grid__card {
+
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>简单地分析一下布局的策略。</p> <ul><li>将卡片容器 <code>.grid</code> 定义为一个三行三列的网格，将它的 <code>grid-template-columns</code> 和 <code>grid-tempate-rows</code> 属性的值都设置为 <code>repeat(3, minmax(0, 1fr))</code>。</li> <li>使用 <code>grid-area</code> 属性，根据网格线名称，将图片 <code>.grid__img</code> 和 <code>.grid__card</code> 放置到相应的位置，比如图片放在卡片左上角，卡片内容放置在卡片右下角，两者在卡片正中间相互交叉与叠加。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>body {
+    display: grid;
+  
+    /* RAM 布局技术，实现卡片自动断行*/
+    grid-template-columns: repeat(auto-fit, minmax(min(100% - 3rem, 30rem), 1fr));
+    gap: 2rem;
+    align-content: start;
+}
+
+.grid {
+    display: grid;
+    
+    /* 创建一个三行三列的网格 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+/* 将卡片上的缩略图放置到指定的位置 */
+.grid__img {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+/* 单双数卡片上缩略图位置刚好相反 */
+.grid:nth-child(2n) .grid__img {
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+/* 将卡片上的内容放置到指定的位置 */
+.grid__card {
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+/* 单双数卡片上的内容位置刚好相反 */
+.grid:nth-child(2n) .grid__card {
+    grid-area: 1 / 1 / 3 / 3;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16edb28bda4c42ec83f9fe10af4b1ba7~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>我们需要将 <code>a.link</code> 的伪元素 <code>::before</code> 和 <code>::after</code> 分别遮盖在卡片的图片<code>.grid__img</code> 和 <code>.grid__card</code> 上面，为了位置和大小能和它们完全相匹配，采用子网格是较好的一种策略。我们需要做的是：</p> <ul><li><code>.link</code> 要和父网格一样的大，简单地说，合并三行三列，使用 <code>grid-area</code> 就可以轻易地实现，因为它也是父网格 <code>.grid</code> 的一个网格项目。</li> <li>将 <code>.link</code> 也定义为一个网格，并且将它的 <code>grid-template-columns</code> 和 <code>grid-templage-rows</code> 都设置为 <code>subgrid</code> ，这样就完全继承父网格 <code>.grid</code> 的特性。</li> <li>像放置卡片上的缩略图和内容一样，使用 <code>grid-area</code> 将链接<code>.link</code> 的伪元素 <code>.link::before</code> 、<code>.link::after</code> 放置到指定位置，它们的位置和卡片上缩略图和内容区域是相同的：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>.link {
+  grid-area: 1 / 1 / -1 / -1;
+
+  display: inherit;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  z-index: 3;
+}
+
+.link::before {
+  grid-area: 1 / 1 / 3 / 3;
+}
+.link::after {
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+
+.grid:nth-child(2n) .link::before {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.grid:nth-child(2n) .link::after {
+  grid-area: 2 / 2 / 4 / 4;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a4a7a5fed434adcb214806ef1dfd7c9~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>由于卡片上的缩略图（<code>.grid__img</code>）、内容区域（<code>.grid__card</code>）、链接伪元素（<code>.link::before</code> 和 <code>.link::after</code>）会有一定区域的交叉和层叠：</p> <ul><li>内容区域（<code>.grid__card</code>）和缩略图（<code>.grid__img</code>）有一定交叉区域（网格线 <code>2 / 2 / 3 / 3</code> 围绕的区域），并且在 <code>z</code> 轴上，内容区域是高于缩略图的，因此要显式设置 <code>z-index</code> 的话，<code>.grid__card</code> 的 <code>z-index</code> 要大于 <code>.grid__img</code> 的。</li> <li>链接伪元素 <code>.link::before</code> 和 <code>.link::after</code> 同样在网格线 <code>2 / 2 / 3 / 3</code> 围绕的区域相互交叉，并且在 <code>z</code> 轴上 <code>.link::after</code> 高于 <code>.link::before</code> 。</li> <li>链接伪元素 <code>.link::before</code> 和 <code>.link::after</code> 分别与卡片缩略图 <code>.grid__img</code> 和内容区域 <code>.grid__card</code> 相互重叠。在该示例中，为了保证交互效果不出问题，需要确保 <code>.link::before</code> 和 <code>.link::after</code> 在 <code>z</code> 轴上高于 <code>.grid__img</code> 和 <code>.grid__card</code>。</li></ul> <p>在这个示例中，默认情况下（即，各个元素上未显式设置 <code>z-index</code> 值），<code>.link</code> 在 <code>z</code> 轴上层级低于 <code>.grid__img</code> 和 <code>.grid__card</code> ，这也造成 <code>.link::before</code> 和 <code>.link::after</code> 两个伪元素在 <code>z</code> 轴上也低于 <code>.grid__img</code> 和 <code>.grid__card</code> 。</p> <p>而 <code>.grid__card</code> 在 <code>z</code> 轴上的层级是高于 <code>.grid__img</code> 。这是因为，在 CSS 中如果网格项目未显式设置 <code>z-index</code> 的值，它将按照元素在 HTML 文档源码中出现的顺序为参照值，越在后面出现，在 <code>z</code> 轴的层级越高。</p> <p>为了避免卡片内容被缩略图遮盖，同时为了保证卡片上交互正常，我们可以给 <code>.link</code> 和 <code>.grid__content</code> 的 <code>z-index</code> 属性设置一个值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.link {
+    grid-area: 1 / 1 / -1 / -1;
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    
+    z-index: 3; /* 确保该值大于 .grid__card 值*/
+}
+
+.grid__card {
+    grid-area: 2 / 2 / 4 / 4;
+    
+    z-index: 2;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>再来看一个运用 <code>subgrid</code> 布局的卡片组件：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f5a8cfff72c34bdcbbd664a69de0476d~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>看上去很普通的一个卡片组件，但它有一个很显著的特征，图片的标注和卡片标题是对齐，并且主内容与图片之间有一定的空白间距：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91ea82684caa4552a2a4cec900cc0d24~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>你可能会说，CSS 实现上图这样的布局效果已经是非常容易的了。这样说并不错，但是在一定的结构限制之下，比如说，为了让 Web 可访问性做得更好一些，对屏幕阅读器更友好一些，构建上图的 HTML 结构可能会是下面这样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;card&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;thumb.jpg&quot; alt=&quot;卡片缩略图&quot; /&gt;
+        &lt;figcaption&gt;图片标注&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;h3 class=&quot;title&quot;&gt;卡片标题&lt;/h3&gt;
+    &lt;p&gt;卡片描述&lt;/p&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>试想一下，不管你是准备使用 Flexbox 还是 Grid 来构建布局，要实现上图的效果是没有那么容易的。所以说，当 HTML 结构有一定的限制时，常用的 Web 布局技术要实现起来就显得没那么容易了。不过，使用 CSS 子网格来构建这种卡片布局，就容易很多了。</p> <p>我们可以在卡片 <code>.card</code> 上像下面这样定义一个网格：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> .card { 
+     display: grid; 
+     grid-template-columns: 1fr 1fr 50px 50px 1fr 1fr; 
+     grid-template-rows: repeat(3, min-content); 
+     gap: 1rem 1.25rem; 
+ }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fd058b67da34458b33595b31e2b40b7~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>同时 <code>figure</code> 跨五列两行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> figure { 
+     grid-row: 2 / span 2; 
+     grid-column: 1 / span 5; 
+} 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9359f11102f48f79a3c9f3e934fc68c~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>此时，在 <code>figure</code> 上使用 <code>subgrid</code> ，并将 <code>img</code> 和 <code>figcaption</code> 按网格线放置到指定位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>figure { 
+    display: grid; 
+    grid-template-rows: subgrid; 
+    grid-template-columns: subgrid; 
+} 
+
+figure img { 
+    grid-column: 1 / span 3; 
+    grid-row: 1 / span 2; 
+} 
+
+figcaption { 
+    grid-row: 2; 
+    grid-column: 4 / span 2; 
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/853fe9fe141e49148d07375d531b2003~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>你最终看到的效果如下：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cde0a86c6863420cb972207dc1bb1459~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/YzvZKxV" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/YzvZKxV<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="百分百宽度的条纹布局"><a href="#百分百宽度的条纹布局" class="header-anchor">#</a> 百分百宽度的条纹布局</h2> <p>百分百宽度的条纹布局其实是 <strong>Full-Bleed</strong> 布局效果的延伸，它看起来像下面这样：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6a229d20e4d943359897c304d489af44~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>上图这种布局效果也是 Web 布局中常见的一种，它有着自己的特色，比如有全屏的、距离左侧或右侧有一定空白空间的。</p> <p>如果我们把整个布局分成三列，类似于 Full-Bleed 布局，左侧和右侧都是自适应的，主栏是固定宽度的。那么：</p> <ul><li>全屏就是跨越网格三列；</li> <li>距离左侧有一定空白空间就是跨越两列，而且是从主栏起始到右侧栏结束位置；</li> <li>距离右侧有一定空白空间就是跨越两列，而且从左侧栏起始到主栏结束位置。</li></ul> <p>使用 CSS 网格可以很容易实现 <strong>Full-Bleed</strong> 布局：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;h1&gt;现代 Web 布局：使用 CSS 网格构建 Full-Bleed 布局&lt;/h1&gt;
+  &lt;p&gt;Meaning that a ...&lt;/p&gt;
+  &lt;section class=&quot;full__bleed&quot;&gt;
+    &lt;img src=&quot;https://picsum.photos/2568/600?random=1&quot; width=&quot;2568&quot; height=&quot;600&quot; alt=&quot;&quot; /&gt;
+  &lt;/section&gt;
+  &lt;p&gt;Meaning that ...&lt;/p&gt;
+&lt;/div&gt;
+.container {
+    --limit-max-container-width: 1024px;
+    --limit-min-container-width: 320px;
+    --gutter: 1rem;
+
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter), 1fr)
+        minmax(
+          min(var(--limit-min-container-width), 100% - var(--gutter) * 2),
+          var(--limit-max-container-width)
+        )
+        minmax(var(--gutter), 1fr);
+    row-gap: var(--gutter);
+}
+
+.container &gt; * {
+    grid-column: 2;
+}
+
+.container .full__bleed {
+    grid-column: 1 / -1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6d063337c2a49ec8eaf06df9110a258~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/vYrxErN" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/vYrxErN<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>我们只需要将上面的代码稍微调整一下，就可以基于子网格 <code>subgrid</code> 的功能来实现 Full-Bleed 布局。比如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.container {
+    --limit-max-container-width: 1024px;
+    --limit-min-container-width: 320px;
+    --gutter: 1rem;
+
+    display: grid;
+    grid-template-columns:
+        [fullbleed-start] minmax(var(--gutter), 1fr)
+        [main-start]
+        minmax(
+          min(var(--limit-min-container-width), 100% - var(--gutter) * 2),
+          var(--limit-max-container-width)
+        )
+        [main-end]
+        minmax(var(--gutter), 1fr)
+        [fullbleed-end];
+    row-gap: var(--gutter);
+}
+
+.container &gt; * {
+    grid-column: main;
+    
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+
+.container &gt; * {
+    grid-column: main;
+
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+
+.full__bleed,
+.full__bleed &gt; * {
+    grid-column: fullbleed;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>示例中，在 <code>grid-template-columns</code> 定义网格轨道的时候，也显式给网格线命名。<code>.container</code> 容器中所有子元素都被定义为一个子网格，并且 <code>grid-template-columns</code> 设置为 <code>subgrid</code> 。我们都知道，子网格会继承父网格所有特性，你可以使用已命名好的网格线名称来放置网格项目：</p> <ul><li>除全宽（百分百宽度）的元素 <code>.full__bleed</code> 之外的其他元素都被放置在 <code>main-start / main-end</code> 列；</li> <li>全宽（百分百宽度）的元素 <code>.full__bleed</code> 放置在 <code>fullbleed-start / fullbleed-end</code> 列。</li></ul> <p>加上 <code>.container</code> 所有子元素的 <code>display</code> 属性值设置为 <code>inherit</code> ，因此它们都是一个网格（是 <code>.container</code> 网格的子网格），所以它们的子元素，比如 <code>.full__bleed</code> 的子元素 <code>img</code> 也是网格项目。它们都是全宽，即 <code>fullbleed-start / fullbleed-end</code> 。</p> <p>使用子网格和直接使用网格构建出来的 Full-Bleed 布局效果是一样的：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10eff151fd6b4b148fe04ac06a03359d~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/gOKmbQL" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/gOKmbQL<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>有了这个基础，我们就可以来看子网格构建“百分百宽度的条纹布局”了。把 HTML 结构调整一下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;h1&gt;百分百宽度的条纹布局（Subgrid）&lt;/h1&gt;
+  &lt;p&gt;Meaning that a ...&lt;/p&gt;
+  &lt;section class=&quot;full__bleed fullwidth&quot;&gt;
+    &lt;img src=&quot;&quot; width=&quot;2568&quot; height=&quot;600&quot; alt=&quot;&quot; /&gt;
+  &lt;/section&gt;
+  &lt;p&gt;Meaning that ...&lt;/p&gt;
+  &lt;section class=&quot;full__bleed left&quot;&gt;
+    &lt;img src=&quot;&quot; width=&quot;2568&quot; height=&quot;600&quot; alt=&quot;&quot; /&gt;
+  &lt;/section&gt;
+  &lt;p&gt;Meaning that ...&lt;/p&gt;
+  &lt;section class=&quot;full__bleed right&quot;&gt;
+    &lt;img src=&quot;&quot; width=&quot;2568&quot; height=&quot;600&quot; alt=&quot;&quot; /&gt;
+  &lt;/section&gt;
+  &lt;p&gt;Meaning that ...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>我们可以像下图这样来定义网格：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2bd27b363f8644eda92ddcb51cac7004~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>正如你所看到的：</p> <ul><li>网格第一列和最后一列是一个较小的空白间距，相当于间距一样，比如说 <code>1rem</code>；</li> <li>网格第二列和第四列是相等的，占用容器的可用空间，可以使用 <code>fr</code> 单位值来定义，我们这里设置为 <code>minmax(0, 1fr)</code>；</li> <li>网格第三列（中间列），它是用来放置居中内容的一列，为了更好地适配不同终端的浏览器屏幕的尺寸，可以将 <code>minmax()</code> 和 <code>min()</code> 函数结合起来使用，比如 <code>minmax(min(var(--limit-min-container-width), 100% - var(--gutter) * 2),var(--limit-max-container-width))</code></li></ul> <p>具体代码如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.container {
+    --limit-max-container-width: 960px;
+    --limit-min-container-width: 320px;
+    --gutter: 1rem;
+​
+    display: grid;
+    grid-template-columns:
+        [fullwidth-start]
+        var(--gutter)
+        [left-start]
+        minmax(0, 1fr)
+        [main-start right-start]
+        minmax(
+          min(var(--limit-min-container-width), 100% - var(--gutter) * 2),
+          var(--limit-max-container-width)
+        )
+        [main-end left-end]
+        minmax(0, 1fr)
+        [right-end]
+        var(--gutter)
+        [fullwidth-end];
+  row-gap: var(--gutter);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>和实现 Full-Bleed 布局示例一样，把网格容器 <code>.container</code> 的所有子元素（所有网格项目）设置为子网格，并且显式设置 <code>grid-template-columns</code> 的值为 <code>subgrid</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.container &gt; * {
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1b343aaef8943f4a45949c7d3df1f64~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>这样，你就可以使用网格线名称，将网格项目放置到相应的位置，完成最终所需要的布局效果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.container &gt; *:not(.full__bleed) {
+    grid-column: main;
+}
+​
+.full__bleed.fullwidth {
+    grid-column: fullwidth;
+}
+​
+.fullwidth img {
+    grid-column: fullwidth;
+}
+​
+.fullwidth figcaption {
+    grid-column: main;
+    justify-self: center;
+}
+​
+.full__bleed.left {
+    grid-column: left;
+}
+​
+.left &gt; img {
+    grid-column: left;
+}
+​
+.left &gt; figcaption {
+    grid-column: main;
+    justify-self: end;
+}
+​
+.full__bleed.right {
+    grid-column: right;
+}
+​
+.right &gt; img {
+    grid-column: right;
+}
+​
+.right &gt; figcaption {
+    grid-column: main;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><p>最终效果如下：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/721b53c9f1034ce984799df277ae29d3~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/ZEReYVq" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/ZEReYVq<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>注意，你也可以在上面示例基础上进一步加工，实现下图这样的布局效果：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ce60203dffd4b78ba92f17f55352ed8~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>就当上图是个小作业，感兴趣的同学不妨试一试，看看你能用多少种布局方案实现上图的布局效果。</p> <h2 id="时间轴-timeline-组件"><a href="#时间轴-timeline-组件" class="header-anchor">#</a> 时间轴（Timeline）组件</h2> <p>时间轴卡片组件也是 Web 中常见的一种设计，我们可以在上面的“百分百宽度的条纹布局”技术方案的基础上来构建时间轴卡片组件。</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05ed74596f6d4812be9a29d6018f3948~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>使用网格和子网格，再借助 CSS 媒体查询，你就可以很轻易构建出上图所示的时间轴卡片组件。</p> <ul><li>当浏览器视窗宽度大于 <code>768px</code> ，卡片在时间轴上是错开排列的，单数居右，双数居中；</li> <li>当浏览器视窗宽度小于 <code>768px</code> ，卡片在块轴方向垂直排列。</li></ul> <p>另外，每张卡片的数字指示器，都能和卡片的标题垂直对齐：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24e5367e137b47e2bdcc4818a269ad01~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址：<a href="https://codepen.io/airen/full/KKeWVNq" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/KKeWVNq<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>上图所示的时间轴卡片组件所需的 HTML 的结构可能会像下面这样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;timeline&quot;&gt;
+    &lt;!-- 卡片容器 --&gt;
+    &lt;div class=&quot;card--wrapper&quot;&gt;
+        &lt;!-- 每张卡片的 HTML 结构 --&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;h3 class=&quot;title&quot;&gt;卡片标题&lt;/h3&gt;
+            &lt;div class=&quot;card__content&quot;&gt;
+                &lt;p&gt;卡片描述内容&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;!-- 卡片脚部 --&gt;
+            &lt;blockquote&gt;
+                &lt;svg viewBox=&quot;0 0 512 512&quot; width=&quot;80&quot; title=&quot;quote-left&quot; class=&quot;quote-icon&quot;&gt;
+                  &lt;path d=&quot;M46...&quot; fill=&quot;currentColor&quot; /&gt;
+                &lt;/svg&gt;
+                &lt;p&gt;Dolor ce...&lt;/p&gt;
+            &lt;/blockquote&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 省略其他卡片的 HTML 结构 --&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>对于构建上图这样的响应式时间轴卡片组件，我们遵循<strong>移动端先行</strong>的原则，即：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0b18e99b46a41ea86b7a13f767bc876~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>你已经看到了，时间轴卡片组件的<strong>轴和卡片的数字指示器</strong>都在卡片的左侧，这样一来：</p> <ul><li>轴和卡片的数字指示器都在第一列；</li> <li>卡片在第二列。</li></ul> <p>所以，我们可以在 <code>.timeline</code> 中创建一个两列网格，第一列是用来放置轴和卡片数字指示器的，你可以考虑设定，比如 <code>4rem</code> ，第二列可以把网格的可用空间（除第一列和列间距之外的空间）都留给卡片，可以设置 <code>1fr</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.timeline {
+    display: grid;
+    grid-template-columns: minmax(4rem, max-content) 1fr;
+    gap: 2rem 4px;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19582dcd1e8e4bc7978fc1365c8059e7~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>按照网格项目放置的方法，将时间轴和卡片放置到指定的位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.timeline::before {
+    grid-column: 1 / 2;
+}
+
+.card--wrapper {
+    grid-column: 1 / 3;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>注意，示例中的轴线（上图中的“白色竖条”）使用了 <code>.timeline</code> 的伪元素 <code>::before</code> 绘制的，为了让 HTML 结构更简洁以及少嵌套一层子网格，对于时间轴的轴线采用了绝对定位，看上去就像是跨越了网格 <code>.timeline</code> 的所有行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.timeline::before {
+    /* 将时间轴线放置在 timeline 网格的第一列中 */
+    grid-column: 1 / 2;
+    
+    /* 绘制时间轴线 */
+    content: &quot;&quot;;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    
+    /* 采用绝对定位，让时间轴线跨越 timeline 网格的所有行, 并采用绝对定位，让其水平居中 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>不难发现，每张卡片都有两个部分组成，即<strong>卡片数字指示器</strong>和<strong>卡片自身</strong>， 而且卡片数字指示器也是放在第一列，和时间轴线重叠在一起。所以，我们可以将 <code>.card--wrapper</code> 也定义为一个网格，并且继承其父网格 <code>.timeline</code> 的列网格轨道数量和尺寸，即设置 <code>grid-template-columns</code> 的值为 <code>subgrid</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card--wrapper {
+    grid-column: 1 / 3;
+​
+    display: inherit;
+    grid-template-columns: subgrid;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/169386e8a3ad47be9e6b00bf742e01d8~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>这样你就可以使用网格线，将卡片数字指示器 <code>.card--wrapper::before</code> 和卡片 <code>.card</code> 放置到指定的位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card--wrapper::before {
+    grid-column: 1 / 2;
+}
+​
+.card {
+    grid-column: 2;
+    grid-row: span 3;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>特别声明，示例中的卡片数字指示器使用的是 CSS 的计算数器相关特性 <code>counter-reset</code> 、<code>counter-increment</code> 、<code>counter()</code> 和 CSS 伪元素自动生成的。这方面的内容已超出我们这个小册介绍的范围，感兴趣的同学请查阅示例相关源码！</p></blockquote> <p>为了让卡片计数器能和卡片标题始终保持垂直对齐，还需要进一步将 <code>.card</code> 也定义为子网格，并且需要将它的 <code>grid-template-rows</code> 设置为 <code>subgrid</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.card--wrapper::before {
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.card {
+    grid-column: 2;
+    grid-row: span 3;
+  
+    display: inherit;
+    grid-template-rows: subgrid;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>离目标越来越近了，只需要使用媒体查询 <code>@media</code> 在浏览器视窗宽度大于 <code>768px</code> 的条件下，重新定义父网格 <code>.timelne</code> 的列网格轨道的数量和尺寸，并且调整卡时间轴线、卡片数字指示器和卡片的位置，就可以完成最终想要的效果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@media only screen and (min-width: 768px) {
+    /* 将网格列调整为三列 */
+    .timeline {
+        grid-template-columns: 1fr minmax(4rem, max-content) 1fr;
+    }
+
+    /* 时间轴线放置在第二列中 */
+    .timeline::before {
+        grid-column: 2 / 3;
+    }
+
+    /* 奇数卡片容器从第二列开始，并且跨越两列 */
+    .card--wrapper:nth-of-type(2n + 1) {
+        grid-column: 2 / span 2;
+    }
+
+    /* 偶数卡片容器从第一列开始，也跨越两列 */
+    .card--wrapper:nth-of-type(2n) {
+        grid-column: 1 / span 2;
+    }
+    
+    /* 偶数卡片放置在第一列 */
+    .card--wrapper:nth-of-type(2n) .card {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    
+        /* 偶数卡片其他样式的微调整 */
+        filter: drop-shadow(-6px 6px 0px black);
+        margin-left: 0;
+        margin-right: 0.8rem;
+    }
+
+    /* 调整偶数卡片三角指向标的位置 */
+    .card--wrapper:nth-of-type(2n) .title::after {
+        right: auto;
+        left: calc(100% - 15px);
+        transform: translateY(-50%) rotate(-135deg);
+    }
+
+    /* 调整偶数卡片数字指示器位置 */
+    .card--wrapper:nth-of-type(2n)::before {
+        grid-column: 2 / 3;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2103dcd6f9f64f5db52bdd6062442254~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <h2 id="表单布局"><a href="#表单布局" class="header-anchor">#</a> 表单布局</h2> <p>表单是 Web 中不可或缺的部分，因为 Web 需要用表单来和用户进行交流，所以将表单布局设计的好就显得尤为重要。比如下面这个登录表单：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c20e8654d3347d88d1e8924b09f0663~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>这是一个具有响应式能力的登录表单。暂且抛开其 UI 不谈，就只聊表单控件。在移动端上，布局相对较为简单，表单控件的标签 <code>&lt;label&gt;</code> 、表单控件（比如 <code>&lt;input&gt;</code>）、验证信息等都是垂直排列的。平板和桌面端，由于空间变大，更好地利用水平方向的空间，会把垂直排列的布局，调整为水平排列的布局，即 表单控件标签居左，表单控件和验证信息居右，甚至有的元素占两列，比如上图中的“登录按钮”。</p> <p>另外，大多数构建表单一般会采用下面这样的 HTML 结构：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;form&gt;
+    &lt;div class=&quot;control&quot;&gt;
+        &lt;label for=&quot;id--name&quot;&gt;标签名&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;id--name&quot; name=&quot;user-name&quot; placeholder=&quot;用户名&quot; /&gt;
+        &lt;p class=&quot;control__help&quot;&gt;验证信息&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>就上面的 HTML 的结构而言，要实现水平排列的布局是有难度的。即使是没有验证信息这一项，使用 Flexbox 布局也有一定的局限性，尤其是控件标签字数不同，你不得不在标签上 <code>label</code> 设置一个 <code>min-width</code> 值。</p> <p>要是使用 CSS 网格来构建的话，就会方便很多，也不用担心标签控件字数，以及有没有其他的辅助元素，因为我们可以使用网格线名称，将元素放置到任意我们想要放置的位置。</p> <p>接下来，就以上图为例，一起来看看怎么使用 CSS 网格和子网格实现所需要的表单布局。先来看 HTML 结构：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;form--wrapper&quot;&gt;
+    &lt;div class=&quot;form&quot;&gt;
+        &lt;form&gt;
+            &lt;h3&gt;登录&lt;/h3&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;label for=&quot;user--name&quot;&gt;昵称：&lt;/label&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;请输入用户 ID&quot; name=&quot;user-name&quot; id=&quot;user--name&quot; /&gt;
+                &lt;p&gt;用户 ID 不存在&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;label for=&quot;user--password&quot;&gt;密码：&lt;/label&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;请输入登录密码&quot; name=&quot;user-password&quot; id=&quot;user--password&quot; /&gt;
+                &lt;p&gt;密码输入错误&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;label for=&quot;remember&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot; id=&quot;remember&quot; name=&quot;remember&quot;&gt;
+                    请记住我!
+                &lt;/label&gt;  
+            &lt;/div&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;button&gt;登录&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;label&gt;没有账号？&lt;a href=&quot;&quot;&gt;点击我注册&lt;/a&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;figure&gt;
+            &lt;img src=&quot;&quot; alt=&quot;封面图&quot; /&gt;
+        &lt;/figure&gt;    
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p>简单地分析一下，基于上面这个 HTML 结构，构建上图表单布局，可能会定义的网格有：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17c33b5d1f0747a29e0d57e418e8260d~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <ul><li><code>body</code> 定义一个网格，主要用于整体的页面布局，构建一个 Full-Bleed 布局；</li> <li><code>.form--wrapper</code> 定义一个网格，是构建表单 UI 主体布局，也是主网格；</li> <li><code>.form</code> 是 <code>.form--wrapper</code> 的一个子网格，用于控制 <code>form</code> 和 <code>figure</code> 以及 <code>.form::before</code> 和 <code>.form::after</code> 四个网格项目的位置；</li> <li><code>form</code> 重新定义一个网格，用于表单元素上的布局；</li> <li><code>.control</code> 是 <code>form</code> 网格的子网格，控制表单标签、表单控件、验证信息等位置。</li></ul> <p>接下来简单介绍一个涉及到布局的 CSS 代码。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>body {
+    display: grid;
+    grid-template-columns: 
+        minmax(1rem, 1fr) 
+        minmax(min(100% - 2rem, 1134px), 1fr) 
+        minmax(1rem,1fr);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>这段代码就不多说了，前面出现很多次了，即 Full-Bleed 布局代码。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.form--wrapper {
+    grid-column: 2 / 3;
+
+    display: inherit;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+}
+
+.form {
+    grid-area: 1 / 1 / -1 / -1;
+    margin: clamp(1rem, 2vw + 1.5rem, 3rem);
+    z-index: 2;
+
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+
+    justify-items: center;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><code>.form</code> 网格是 <code>.form--wrapper</code> 网格的子网格，它继承了其父网格所有参数：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6234181631c54978acb6c62a0cfad323~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>在移动端下，网格项目都层叠在一起，如上图所示，整个表单 <code>&lt;form&gt;</code> 堆叠在图片 <code>&lt;figure&gt;</code> 之上。这在网格布局中是很容易就能做到的：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.form &gt; * {
+    grid-area: 1 / 1 / -1 / -1;
+}
+
+.form::before,
+.form::after {
+    grid-area: 1 / 1 / -1 / -1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>在平板和桌面端时，使用 CSS 媒体查询特性来调整 <code>.form</code> 网格的列轨道，并且将 <code>&lt;form&gt;</code> 和 <code>&lt;figure&gt;</code> 位置调整为水平排列，不再是堆叠在一起了：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dfae34b4f659486899e2d44f81decef3~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@media only screen and (min-width: 768px) {
+    .form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+​
+    .form figure {
+        grid-column: 1 / 2;
+    }
+​
+    .form::before,
+    .form::after {
+        grid-column: 1 / 2;
+    }
+​
+    .form &gt; form {
+        grid-column: 2 / 3;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>使用同样的方法，分别将 <code>form</code> 和 <code>.control</code> 定义为网格。注意，这里的 <code>form</code> 网格只是 <code>.from</code> 网格的嵌套网格，它们是两个相互独立的网格，但 <code>.control</code> 网格却是 <code>form</code> 网格的子网格：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>form {
+    display: inherit;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+}
+​
+.control {
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 0.25rem;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/891e6f508d5c42b59da552323a608339~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <p>根据网格线，将网格项目放置到指定位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>form &gt; * {
+    grid-column: span 2;
+}
+​
+.control &gt; * {
+    grid-column: 1 / -1;
+}
+​
+.control:nth-last-child(-n + 3) {
+    grid-row: span 1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>在桌面端时，调整相关的位置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@media only screen and (min-width: 1024px) {
+    .control {
+        grid-row: span 2;
+    }
+​
+    .control &gt; label {
+        grid-column: 1;
+        justify-self: end;
+    }
+​
+    .control &gt; input {
+        grid-column: 2;
+    }
+​
+    .control &gt; p {
+        grid-row: 2;
+        grid-column: 2;
+    }
+​
+    .control:nth-last-child(3) &gt; label,
+    .control:last-child &gt; label {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+​
+    form h3 {
+        justify-self: start;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>最终示例用到的布局代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>body {
+    display: grid;
+    grid-template-columns: 
+        minmax(1rem, 1fr) 
+        minmax(min(100% - 2rem, 1134px), 1fr) 
+        minmax(1rem,1fr);
+}
+​
+.form--wrapper {
+    grid-column: 2 / 3;
+​
+    display: inherit;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+}
+​
+.form--wrapper::before {
+    grid-area: 1 / 3 / 2 / 4;
+}
+​
+.form--wrapper::after {
+    grid-area: 3 / 1 / 4 / 3;
+    align-self: end;
+}
+​
+.form {
+    grid-area: 1 / 1 / -1 / -1;
+    margin: clamp(1rem, 2vw + 1.5rem, 3rem);
+    z-index: 2;
+​
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+​
+    justify-items: center;
+}
+​
+.form &gt; * {
+    grid-area: 1 / 1 / -1 / -1;
+}
+​
+.form::before,
+.form::after {
+    grid-area: 1 / 1 / -1 / -1;
+}
+​
+form {
+    width: 100%;
+    z-index: 3;
+    padding: clamp(1rem, 2vw + 1.5rem, 3rem);
+}
+​
+figure {
+    z-index: 1;
+}
+​
+.form::before {
+    z-index: 2;
+}
+​
+form {
+    display: inherit;
+    place-content: center;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+}
+​
+form &gt; * {
+    grid-column: span 2;
+}
+​
+form h3 {
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+​
+.control {
+    display: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 0.25rem;
+    align-items: center;
+}
+​
+.control &gt; * {
+    grid-column: 1 / -1;
+}
+​
+.control:nth-last-child(-n + 3) {
+    grid-row: span 1;
+}
+​
+@media only screen and (min-width: 768px) {
+    .form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+​
+    .form figure {
+        grid-column: 1 / 2;
+    }
+​
+    .form::before,
+    .form::after {
+        grid-column: 1 / 2;
+    }
+​
+    .form &gt; form {
+        grid-column: 2 / 3;
+        color: #333;
+        text-shadow: none;
+    }
+    .control p {
+        text-shadow: none;
+    }
+}
+​
+@media only screen and (min-width: 1024px) {
+    .control {
+        grid-row: span 2;
+    }
+​
+    .control &gt; label {
+        grid-column: 1;
+        justify-self: end;
+    }
+​
+    .control &gt; input {
+        grid-column: 2;
+    }
+​
+    .control &gt; p {
+        grid-row: 2;
+        grid-column: 2;
+    }
+​
+    .control:nth-last-child(3) &gt; label,
+    .control:last-child &gt; label {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+​
+    form h3 {
+        justify-self: start;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br></div></div><p>最终的效果如下图所示：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92984e5b70f54a61a92242f9278811b2~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p> <blockquote><p>Demo 地址： <a href="https://codepen.io/airen/full/LYrWMwP" target="_blank" rel="noopener noreferrer">https://codepen.io/airen/full/LYrWMwP<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>上面提到的示例只是使用子网格布局的几个常见的案例，事实上在 Web 布局中还有很多潜在的用例可以使用子网格来构建。简单地说，<strong>CSS 子网格将打开许多以前不可能的可能性</strong>。正如上面示例所展示的一样，在 CSS 子网格布局的基础上，你只需要添加一点点媒体查询的代码，就可以构建出适配更多终端平台的布局。</p> <p>事实上，除了子网格和媒体查询结合之外，我们还可以使用容器查询和子网格一起来构建出组件式响应的布局。你将会感觉到，CSS 怎么能这么容易就实现了响应式布局。有关于这方面更详细的介绍，我们将在响应式布局的课程中与大家探讨。</p> <p>心动不如行动，最后给大家布置一个小作业，请使用 CSS 子网格构建下图中天气组件的布局：</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/afff8ca9c9ec4cde8820b8a9250726cc~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/xugaoyi/vuepress-theme-vdoing/edit/master/docs/02.页面/50.现代web布局/17.使用子网格构建 Web 布局.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/./pages/7c5b48/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">网格布局中的子网格和嵌套网格</div></a> <a href="/./pages/bc56a8/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">使用 Grid 构建经典布局：10 种经典布局</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/./pages/7c5b48/" class="prev">网格布局中的子网格和嵌套网格</a></span> <span class="next"><a href="/./pages/bc56a8/">使用 Grid 构建经典布局：10 种经典布局</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/./archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/./pages/5039fe/"><div>
+            现代 Web 布局技术术语
+            <!----></div></a> <span class="date">06-01</span></dt></dl><dl><dd>02</dd> <dt><a href="/./pages/abdd60/"><div>
+            Flexbox 布局基础使用
+            <!----></div></a> <span class="date">06-01</span></dt></dl><dl><dd>03</dd> <dt><a href="/./pages/379fd6/"><div>
+            Flexbox 布局中的对齐方式
+            <!----></div></a> <span class="date">06-01</span></dt></dl> <dl><dd></dd> <dt><a href="/./archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:894072666@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/xugaoyi" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2023
+    <span>Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="./assets/js/app.51e06a17.js" defer></script><script src="./assets/js/2.6bfa654c.js" defer></script><script src="./assets/js/67.eb806f94.js" defer></script>
+  </body>
+</html>
